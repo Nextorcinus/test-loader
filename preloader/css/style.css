@@ -1,0 +1,999 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+
+
+/*======================== Marquee Pure CSS ============================ */
+
+/* Marquee Design */
+.marquee1 {
+  top: 50%;
+  transform: translate( 0%, -51% );
+}
+.marquee2 {
+  top: 50%;
+  transform: translate( 0%, 51% );
+}
+.marquee__content > li.text {
+  flex: 0 0 auto;
+  color: var( --text-c );
+  background: var( --text-bg-c );
+  margin: 2px;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.marquee {
+  border: 2px dashed var( --text-c );
+  
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 20%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+/* Marquee SETUP CSS */
+.marquee {
+  --gap: 1rem;
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  
+  
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  list-style-type: none;
+}
+
+
+/* Marquee Animation & Reverse animation */
+@keyframes marquee_scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+.marquee__content {
+  animation: marquee_scroll 20s linear infinite;
+}
+.marquee--reverse .marquee__content {
+  animation-direction: reverse;
+}
+
+/*======================== Spinner CSS ==================================*/
+
+
+/* Spinner 1 */
+.spinner1 {
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   border: 9px solid;
+   border-color: var( --preloader-c1 );
+   border-right-color: var( --preloader-c2 );
+   animation: spinner1 1s infinite linear;
+}
+
+@keyframes spinner1 {
+   to {
+      transform: rotate(1turn);
+   }
+}
+
+/* Spinner 2 */
+.spinner2 {
+   width: 56px;
+   height: 56px;
+   display: grid;
+   animation: spinner2 4s infinite;
+}
+
+.spinner2::before,
+.spinner2::after {
+   content: "";
+   grid-area: 1/1;
+   border: 9px solid;
+   border-radius: 50%;
+   border-color: var( --preloader-c1 ) var( --preloader-c1 ) #0000 #0000;
+   mix-blend-mode: darken;
+   animation: spinner2 1s infinite linear;
+}
+
+.spinner2::after {
+   border-color: #0000 #0000 var( --preloader-c2 ) var( --preloader-c2 );
+   animation-direction: reverse;
+}
+
+@keyframes spinner2 {
+   100% {
+      transform: rotate(1turn);
+   }
+}
+
+
+.spinner3 {
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   padding: 6.7px;
+   background: conic-gradient(from 135deg at top,var( --preloader-c2 ) 90deg, #0000 0) 0 calc(50% - 4.5px)/19px 9.5px,
+          radial-gradient(farthest-side at bottom left,#0000 calc(100% - 6.7px),var( --preloader-c2 ) calc(100% - 5.6px) 99%,#0000) top right/50%  50% content-box content-box,
+          radial-gradient(farthest-side at top,#0000 calc(100% - 6.7px),var( --preloader-c2 ) calc(100% - 5.6px) 99%,#0000) bottom   /100% 50% content-box content-box;
+   background-repeat: no-repeat;
+   animation: spinner3 1s infinite linear;
+}
+
+@keyframes spinner3 {
+   100% {
+      transform: rotate(1turn);
+   }
+}
+
+
+.spinner4 {
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   background: var( --preloader-c2 );
+   -webkit-mask: radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+   transform-origin: 50% 40%;
+   animation: spinner4 1s infinite linear;
+}
+
+@keyframes spinner4 {
+   100% {
+      transform: rotate(1turn);
+   }
+}
+
+.spinner5 {
+   --s: 9px;
+   width: 56px;
+   height: 56px;
+   background: var( --preloader-c2 );
+   border-radius: 50%;
+   animation: spinner5 2s infinite linear;
+   clip-path: polygon(0 0,calc(50% - var(--s)) 0,50% var(--s),calc(50% + var(--s)) 0,100% 0,100% calc(50% - var(--s)),calc(100% - var(--s)) 50%,100% calc(50% + var(--s)),100% 100%,calc(50% + var(--s)) 100%, 50% calc(100% - var(--s)),calc(50% - var(--s)) 100%,0 100%,0 calc(50% + var(--s)), var(--s) 50%, 0 calc(50% - var(--s)));
+}
+
+@keyframes spinner5 {
+   100% {
+      transform: rotate(1turn);
+   }
+}
+
+
+.spinner6 {
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   background: radial-gradient(farthest-side, var( --preloader-c2 ) 94%,#0000) top/9px 9px no-repeat,
+          conic-gradient(#0000 30%, var( --preloader-c2 ) );
+   -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+   animation: spinner6 1s infinite linear;
+}
+
+@keyframes spinner6 {
+   100% {
+      transform: rotate(1turn);
+   }
+}
+
+/*======================== Background Design CSS ========================*/
+.cover1{ z-index:1; }
+.cover2{ z-index:2; }
+.cover3{ z-index:3; }
+.cover4{ z-index:4; }
+.cover5{ z-index:5; }
+
+.color1 {
+  --text-c: #fff;
+  --text-bg-c: #666;
+  --preloader-c1: #dbdcef;
+  --preloader-c2: #474bff;
+  --c1: #f70;
+  --c2: #07f;
+  --c3: transparent;
+  --c4: transparent;
+}
+
+
+div.design1 {
+  
+  --text-c: #fff;
+  --text-bg-c: #333;
+  --preloader-c1: #dbdcef;
+  --preloader-c2: #474bff;
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(
+      #1d1d1d 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      transparent 50%,
+      transparent 75%,
+      #242424 75%,
+      #242424
+    );
+  background-color: #131313;
+  background-size: 20px 20px;
+}
+
+.color2 {
+  --text-c: #fff;
+  --text-bg-c: #f70;
+  --preloader-c1: #dbdcef;
+  --preloader-c2: #474bff;
+  --c1: #0f7;
+  --c2: #7ff;
+  --c3: transparent;
+  --c4: transparent;
+}
+
+
+div.design2 {
+
+  --text-c: #000;
+  --text-bg-c: #fff;
+  --preloader-c1: #dbdcef;
+  --preloader-c2: #474bff;
+  background: radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #a4a4a4 75px,
+      #a4a4a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #a4a4a4 76px,
+      #a4a4a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #fff;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+div.color3 {
+  --text-c: #000;
+  --text-bg-c: #fff;
+  --preloader-c1: #dbdcef;
+  --preloader-c2: #474bff;
+  --c1: silver;
+  --c2: white;
+  --c3: transparent;
+  --c4: transparent;
+}
+.design3 {
+  background-color: var(--c1);
+  background-image: radial-gradient(
+      circle at 100% 150%,
+      var(--c1) 24%,
+      var(--c2) 24%,
+      var(--c2) 28%,
+      var(--c1) 28%,
+      var(--c1) 36%,
+      var(--c2) 36%,
+      var(--c2) 40%,
+      var(--c3) 40%,
+      var(--c3)
+    ),
+    radial-gradient(
+      circle at 0 150%,
+      var(--c1) 24%,
+      var(--c2) 24%,
+      var(--c2) 28%,
+      var(--c1) 28%,
+      var(--c1) 36%,
+      var(--c2) 36%,
+      var(--c2) 40%,
+      var(--c3) 40%,
+      var(--c3)
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      var(--c2) 10%,
+      var(--c1) 10%,
+      var(--c1) 23%,
+      var(--c2) 23%,
+      var(--c2) 30%,
+      var(--c1) 30%,
+      var(--c1) 43%,
+      var(--c2) 43%,
+      var(--c2) 50%,
+      var(--c1) 50%,
+      var(--c1) 63%,
+      var(--c2) 63%,
+      var(--c2) 71%,
+      var(--c3) 71%,
+      var(--c3)
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      var(--c2) 5%,
+      var(--c1) 5%,
+      var(--c1) 15%,
+      var(--c2) 15%,
+      var(--c2) 20%,
+      var(--c1) 20%,
+      var(--c1) 29%,
+      var(--c2) 29%,
+      var(--c2) 34%,
+      var(--c1) 34%,
+      var(--c1) 44%,
+      var(--c2) 44%,
+      var(--c2) 49%,
+      var(--c3) 49%,
+      var(--c3)
+    ),
+    radial-gradient(
+      circle at 0 50%,
+      var(--c2) 5%,
+      var(--c1) 5%,
+      var(--c1) 15%,
+      var(--c2) 15%,
+      var(--c2) 20%,
+      var(--c1) 20%,
+      var(--c1) 29%,
+      var(--c2) 29%,
+      var(--c2) 34%,
+      var(--c1) 34%,
+      var(--c1) 44%,
+      var(--c2) 44%,
+      var(--c2) 49%,
+      var(--c3) 49%,
+      var(--c3)
+    );
+  background-size: 100px 50px;
+}
+
+.color4 {
+  --text-c: #fff;
+  --text-bg-c: #000;
+  --preloader-c1: #dbdcef;
+  --preloader-c2: #474bff;
+  --c1: #f8e4c1;
+  --c2: #2b4e72;
+  --c3: #0000;
+  --c4: transparent;
+}
+div.design4 {
+  --s: 17px; /* control the size*/
+  --c: var(--c3) 75%, var(--c1) 0;
+  --g1: conic-gradient(at 78% 3%, var(--c));
+  --g2: conic-gradient(at 3% 78%, var(--c));
+  background: var(--g1), var(--g1) var(--s) var(--s),
+    var(--g1) calc(2 * var(--s)) calc(2 * var(--s)),
+    var(--g1) calc(3 * var(--s)) calc(3 * var(--s)),
+    var(--g2) 0 calc(3 * var(--s)), var(--g2) var(--s) 0,
+    var(--g2) calc(2 * var(--s)) var(--s),
+    var(--g2) calc(3 * var(--s)) calc(2 * var(--s)) var(--c2);
+  background-size: calc(4 * var(--s)) calc(4 * var(--s));
+}
+
+.color5{
+  --text-c: #000;
+  --text-bg-c: #fff;
+  --preloader-c1: #dbdcef;
+  --preloader-c2: #474bff;
+  --c1: #f8b195;
+  --c2: #355c7d;
+  --c3: #0000;
+  --c4: transparent;
+}
+div.design5 {
+  --s: 42px; /* control the size*/
+  --_g: var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%,
+    var(--c1) 36% 44%, var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%,
+    var(--c1) 76% 84%, var(--c2) 86% 94%;
+  background: radial-gradient(
+      100% 100% at 100% 0,
+      var(--c1) 4%,
+      var(--_g),
+      var(--c3) 96%,
+      var(--c4)
+    ),
+    radial-gradient(
+        100% 100% at 0 100%,
+        var(--c4),
+        var(--c3) 4%,
+        var(--_g),
+        var(--c1) 96%
+      )
+      var(--c1);
+  background-size: var(--s) var(--s);
+}
+
+
+
+
+
+
+
+
+/* ================================ Semua Yg Dibawah Ini Adalah Preloader Animation =============================*/
+
+
+#preloader-svg{
+  width: 100vw;
+  height: 100vh;
+}
+#preloader {
+  /* Animation Parameter */
+  --animation-duration: 2s;
+  --animation-delay-divider: 10;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+
+  div {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+
+  .cover{
+    animation-fill-mode: both;
+  }
+  
+  
+  .cover1 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 0 ); }
+  .cover2 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 1 ); }
+  .cover3 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 2 ); }
+  .cover4 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 3 ); }
+  .cover5 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 4 ); }
+}
+
+
+#preloader.leave{
+  .cover1 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 4 ); }
+  .cover2 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 3 ); }
+  .cover3 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 2 ); }
+  .cover4 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 1 ); }
+  .cover5 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 0 ); }
+}
+
+
+div.cover-container{
+  --drop-shadow-setup: 1px 1px 24px rgba(0,0,0,0.75); 
+  
+  /*
+  
+  filter: drop-shadow( var( --drop-shadow-setup ) );
+  -webkit-filter: drop-shadow( var( --drop-shadow-setup ) );
+  -moz-filter: drop-shadow( var( --drop-shadow-setup ) );
+  -ms-filter: drop-shadow( var( --drop-shadow-setup ) );
+  -o-filter: drop-shadow( var( --drop-shadow-setup ) );
+  */
+}
+  
+/*======================== Animation CSS ========================*/
+.chevron, .circle, .box, .chevron-left, .chevron2, .chevron2-left {
+  div.cover{
+    mask-image: none;
+  }
+}
+
+.box.enter {
+  div.cover{
+    animation: var( --animation-duration ) box-enter;  
+  }
+}
+.box.leave {
+  div.cover{
+    animation: var( --animation-duration ) box-leave;
+  }
+}
+@keyframes box-enter {
+  0% {
+    clip-path: polygon( 0% 0%, 0% 0%, 50% 00%, 50% 0%, 100% 0%, 100% 0% );
+  }
+  33%{
+    clip-path: polygon( 0% 0%, 0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 0% );
+  }
+  66%{
+    clip-path: polygon( 0% 0%, 0% 100%, 50% 100%, 50% 50%, 100% 50%, 100% 0% );
+  }
+  100% {
+    clip-path: polygon( 0% 0%, 0% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0% );
+  }
+}
+@keyframes box-leave {
+  0% {
+    clip-path: polygon( 0% 0%, 0% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0% );
+  }
+  50%{
+    clip-path: polygon( 0% 0%, 0% 100%, 50% 100%, 50% 0%, 100% 0%, 100% 0% );
+  }
+  100% {
+    clip-path: polygon( 0% 0%, 0% 0%, 50% 00%, 50% 0%, 100% 0%, 100% 0% );
+  }
+}
+
+
+.circle{
+  --circle-max: 150%;
+  --offset-x: 50%;
+  --offset-y: 50%;
+}
+.circle > div.cover-container:nth-child(1) > div.cover {
+  --offset-x: 0%;
+  --offset-y: 0%;
+}
+.circle > div.cover-container:nth-child(2) > div.cover {
+  --offset-x: 100%;
+  --offset-y: 0%;
+}
+.circle > div.cover-container:nth-child(3) > div.cover {
+  --offset-x: 100%;
+  --offset-y: 100%;
+}
+.circle > div.cover-container:nth-child(4) > div.cover {
+  --offset-x: 0%;
+  --offset-y: 100%;
+}
+.circle > div.cover-container:nth-child(5) > div.cover {
+  --circle-max: 100%;
+}
+.circle.enter {
+  div.cover{
+    animation: var( --animation-duration ) circle-enter;  
+  }
+}
+.circle.leave {
+  div.cover{
+    animation: var( --animation-duration ) circle-leave;
+  }
+}
+@keyframes circle-enter {
+  0% {
+    clip-path: circle( 0% at var( --offset-x ) var( --offset-y ) );
+  }
+  100% {
+    clip-path: circle( var( --circle-max ) at var( --offset-x ) var( --offset-y ) );
+  }
+}
+@keyframes circle-leave {
+  0% {
+    clip-path: circle( var( --circle-max ) at var( --offset-x ) var( --offset-y ) );
+  }
+  100% {
+    clip-path: circle( 0% at var( --offset-x ) var( --offset-y ) );
+  }
+}
+
+/*======================== Animation GSAP =======================*/
+
+/* All GSAP will not use clip-path */
+.circle-gsap div.cover, .vertical-gsap div.cover, .horizontal-gsap div.cover, .diagonal-left-gsap div.cover, .diagonal-right-gsap div.cover {
+  clip-path: none;
+}
+
+
+.circle-gsap > div.cover-container:nth-child(1) > div.cover {
+  mask-image: url(#mask-circle-svg1);
+}
+.circle-gsap > div.cover-container:nth-child(2) > div.cover {
+  mask-image: url(#mask-circle-svg2);
+}
+.circle-gsap > div.cover-container:nth-child(3) > div.cover {
+  mask-image: url(#mask-circle-svg3);
+}
+.circle-gsap > div.cover-container:nth-child(4) > div.cover {
+  mask-image: url(#mask-circle-svg4);
+}
+.circle-gsap > div.cover-container:nth-child(5) > div.cover {
+  mask-image: url(#mask-circle-svg5);
+}
+
+
+.vertical-gsap > div.cover-container:nth-child(1) > div.cover {
+  mask-image: url(#mask-vertical-svg1);
+}
+.vertical-gsap > div.cover-container:nth-child(2) > div.cover {
+  mask-image: url(#mask-vertical-svg2);
+}
+.vertical-gsap > div.cover-container:nth-child(3) > div.cover {
+  mask-image: url(#mask-vertical-svg3);
+}
+.vertical-gsap > div.cover-container:nth-child(4) > div.cover {
+  mask-image: url(#mask-vertical-svg4);
+}
+.vertical-gsap > div.cover-container:nth-child(5) > div.cover {
+  mask-image: url(#mask-vertical-svg5);
+}
+
+
+.horizontal-gsap > div.cover-container:nth-child(1) > div.cover {
+  mask-image: url(#mask-horizontal-svg1);
+}
+.horizontal-gsap > div.cover-container:nth-child(2) > div.cover {
+  mask-image: url(#mask-horizontal-svg2);
+}
+.horizontal-gsap > div.cover-container:nth-child(3) > div.cover {
+  mask-image: url(#mask-horizontal-svg3);
+}
+.horizontal-gsap > div.cover-container:nth-child(4) > div.cover {
+  mask-image: url(#mask-horizontal-svg4);
+}
+.horizontal-gsap > div.cover-container:nth-child(5) > div.cover {
+  mask-image: url(#mask-horizontal-svg5);
+}
+
+
+.diagonal-left-gsap > div.cover-container:nth-child(1) > div.cover {
+  mask-image: url(#mask-diagonal-left-svg1);
+}
+.diagonal-left-gsap > div.cover-container:nth-child(2) > div.cover {
+  mask-image: url(#mask-diagonal-left-svg2);
+}
+.diagonal-left-gsap > div.cover-container:nth-child(3) > div.cover {
+  mask-image: url(#mask-diagonal-left-svg3);
+}
+.diagonal-left-gsap > div.cover-container:nth-child(4) > div.cover {
+  mask-image: url(#mask-diagonal-left-svg4);
+}
+.diagonal-left-gsap > div.cover-container:nth-child(5) > div.cover {
+  mask-image: url(#mask-diagonal-left-svg5);
+}
+
+
+.diagonal-right-gsap > div.cover-container:nth-child(1) > div.cover {
+  mask-image: url(#mask-diagonal-right-svg1);
+}
+.diagonal-right-gsap > div.cover-container:nth-child(2) > div.cover {
+  mask-image: url(#mask-diagonal-right-svg2);
+}
+.diagonal-right-gsap > div.cover-container:nth-child(3) > div.cover {
+  mask-image: url(#mask-diagonal-right-svg3);
+}
+.diagonal-right-gsap > div.cover-container:nth-child(4) > div.cover {
+  mask-image: url(#mask-diagonal-right-svg4);
+}
+.diagonal-right-gsap > div.cover-container:nth-child(5) > div.cover {
+  mask-image: url(#mask-diagonal-right-svg5);
+}
+
+
+
+.chevron.enter {
+  div.cover{
+    animation: var( --animation-duration ) chevron-enter;  
+  }
+}
+.chevron.leave {
+  div.cover{
+    animation: var( --animation-duration ) chevron-leave;
+  }
+}
+@keyframes chevron-enter {
+  0% {
+    clip-path: polygon(
+      -25% 0%,
+      0% 50%,
+      -25% 100%,
+      0% 100%,
+      0% 50%,
+      0% 0%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      100% 0%, 
+      125% 50%, 
+      100% 100%, 
+      0% 100%, 
+      0% 50%, 
+      0% 0%
+    );
+  }
+}
+
+@keyframes chevron-leave {
+  0% {
+    clip-path: polygon(
+      -25% 100%, 
+      0% 50%, 
+      -25% 0%,
+      100% 0%, 
+      100% 50%, 
+      100% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      100% 100%, 
+      125% 50%, 
+      100% 0%,
+      100% 0%, 
+      100% 50%, 
+      100% 100%
+    );
+  }
+}
+
+
+.chevron-left.enter {
+  div.cover{
+    animation: var( --animation-duration ) chevron-left-enter;  
+  }
+}
+.chevron-left.leave {
+  div.cover{
+    animation: var( --animation-duration ) chevron-left-leave;
+  }
+}
+@keyframes chevron-left-enter {
+  0% {
+    clip-path: polygon(
+      125% 0%,
+      100% 50%,
+      125% 100%,
+      100% 100%,
+      100% 50%,
+      100% 0%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 0%, 
+      -25% 50%, 
+      0% 100%, 
+      100% 100%, 
+      100% 50%, 
+      100% 0%
+    );
+  }
+}
+@keyframes chevron-left-leave {
+  0% {
+    clip-path: polygon(
+      0% 100%,
+      0% 50%,
+      0% 0%,
+      125% 0%,
+      100% 50%,
+      125% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 100%,
+      0% 50%,
+      0% 0%,
+      0% 0%, 
+      -25% 50%, 
+      0% 100%,
+    );
+  }
+}
+
+
+.chevron2.enter {
+  div.cover{
+    animation: var( --animation-duration ) chevron2-enter;  
+  }
+}
+.chevron2.leave {
+  div.cover{
+    animation: var( --animation-duration ) chevron2-leave;
+  }
+}
+@keyframes chevron2-enter {
+  0% {
+    clip-path: polygon(
+      -25% 0%,
+      0% 50%,
+      -25% 100%,
+      -100% 100%,
+      -75% 50%,
+      -100% 0%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      75% 0%, 
+      95% 50%, 
+      75% 100%, 
+      0% 100%, 
+      25% 50%, 
+      0% 0%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      100% 0%, 
+      100% 50%, 
+      100% 100%, 
+      0% 100%, 
+      0% 50%, 
+      0% 0%
+    );
+  }
+}
+@keyframes chevron2-leave {
+  0% {
+    clip-path: polygon(
+      100% 0%, 
+      100% 50%, 
+      100% 100%, 
+      0% 100%, 
+      0% 50%, 
+      0% 0%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      75% 0%, 
+      95% 50%, 
+      75% 100%, 
+      0% 100%, 
+      25% 50%, 
+      0% 0%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      175% 0%,
+      200% 50%,
+      175% 100%,
+      100% 100%,
+      125% 50%,
+      100% 0%
+    );
+  }
+}
+
+
+.chevron2-left.enter {
+  div.cover{
+    animation: var( --animation-duration ) chevron2-left-enter;  
+  }
+}
+.chevron2-left.leave {
+  div.cover{
+    animation: var( --animation-duration ) chevron2-left-leave;
+  }
+}
+@keyframes chevron2-left-enter {
+  0% {
+    clip-path: polygon(
+      200% 0%,
+      175% 50%,
+      200% 100%,
+      125% 100%,
+      100% 50%,
+      125% 0%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      100% 0%, 
+      75% 50%, 
+      100% 100%, 
+      25% 100%, 
+      5% 50%, 
+      25% 0%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      100% 0%, 
+      100% 50%, 
+      100% 100%, 
+      0% 100%, 
+      0% 50%, 
+      0% 0%
+
+      
+    );
+  }
+}
+@keyframes chevron2-left-leave {
+  0% {
+    clip-path: polygon(
+      100% 0%, 
+      100% 50%, 
+      100% 100%, 
+      0% 100%, 
+      0% 50%, 
+      0% 0%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      100% 0%, 
+      75% 50%, 
+      100% 100%, 
+      25% 100%, 
+      5% 50%, 
+      25% 0%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 0%,
+      -25% 50%,
+      0% 100%,
+      -75% 100%,
+      -90% 50%,
+      -75% 0%
+    );
+  }
+}
+
+
+/*======================== Control CSS ========================*/
+#control {
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  div.button-container {
+    padding-top: 10px;
+    button {
+      width: 100px;
+      padding: 10px;
+    }
+  }
+}
+
+/*======================== Content CSS ========================*/
+#container {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div {
+    font-size: 1em;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+    font-family: "Courier";
+    width: 50vw;
+    padding: 50px;
+  }
+}
+#new-content {
+  display: none;
+}
