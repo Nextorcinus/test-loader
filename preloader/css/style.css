@@ -15,6 +15,7 @@
 .marquee1 {
   top: 50%;
   transform: translate( 0%, -51% );
+  
 }
 .marquee2 {
   top: 50%;
@@ -25,14 +26,14 @@
   color: var(--text-c);
   background: var( --text-bg-c );
   margin: 2px;
-  padding: 0.625rem 1.725rem;
+  padding: 0.825rem 1.725rem;
   border-radius: 5rem;
   text-align: center;
+  border:1px solid #6CCEB090;
+  
 }
 
 .marquee {
-  border: 2px dashed var( --text-c );
-  
   width: 100%;
   mask-image: linear-gradient(
     to right,
@@ -612,7 +613,7 @@ div.design4 {
 
 
 .color5{
-  --text-c: rgb(19, 184, 19);
+  --text-c: rgb(184, 210, 221);
   --text-bg-c: #fff0;
   --preloader-c1: #dbdcef;
   --preloader-c2: #474bff;
@@ -622,124 +623,9 @@ div.design4 {
   --c4: transparent;
 }
 div.design5 {
-  height: 100vh;
-  overflow: hidden;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: radial-gradient(100% 225% at 100% 0%, #FF0000 0%, #000000 100%), linear-gradient(236deg, #00C2FF 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 0%, #CDFFEB 36%, #009F9D 36%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+  background-blend-mode: overlay, hard-light, normal;
 }
-
-
-.grid-container {
-  --grid: 10rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-style: preserve-3d;
-  perspective: 100rem;
-  -webkit-animation: rotate 100s linear infinite forwards;
-          animation: rotate 100s linear infinite forwards;
-}
-.grid-container .plane {
-  --dir: 1;
-  width: 300% !important;
-  height: 150%;
-  min-height: 70rem;
-  position: absolute;
-  bottom: 0;
-  transform-style: preserve-3d;
-  transform-origin: bottom center;
-  transform: translateX(-50%) rotateX(85deg);
-}
-.grid-container .plane:last-child {
-  --dir: -1;
-  top: 0;
-  transform-origin: top center;
-  transform: translateX(-50%) rotateX(-85deg);
-}
-.grid-container .plane:last-child > *::after {
-  background-image: linear-gradient(to top, black var(--grid), rgba(0, 0, 0, 0));
-}
-.grid-container .plane > * {
-  transform-style: preserve-3d;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-.grid-container .plane > *::before, .grid-container .plane > *::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.grid-container .plane > *::before {
-  background-image: repeating-linear-gradient(to left, green, green 4px, transparent 4px, transparent var(--grid)), repeating-linear-gradient(to bottom, green, green 4px, transparent 4px, transparent var(--grid));
-  -webkit-animation: move 1s linear infinite forwards;
-          animation: move 1s linear infinite forwards;
-}
-.grid-container .plane > *::after {
-  background-image: linear-gradient(to bottom, black var(--grid), rgba(0, 0, 0, 0));
-  z-index: 1;
-  transform: translateZ(1px);
-}
-.grid-container .plane .glow {
-  filter: blur(1rem);
-  z-index: 1;
-  mix-blend-mode: plus-lighter;
-}
-
-@-webkit-keyframes move {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(calc(var(--grid) * var(--dir)));
-  }
-}
-
-@keyframes move {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(calc(var(--grid) * var(--dir)));
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    visibility: visible;
-  }
-  50% {
-    visibility: visible;
-  }
-  51% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes blink {
-  0% {
-    visibility: visible;
-  }
-  50% {
-    visibility: visible;
-  }
-  51% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-
 
 
 
