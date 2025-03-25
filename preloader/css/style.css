@@ -2,33 +2,27 @@
   margin: 0px;
   padding: 0px;
   position: relative;
-
 }
-
-
 
 /*======================== Marquee Pure CSS ============================ */
 
 /* Marquee Design */
 .marquee1 {
   top: 50%;
-  transform: translate( 0%, -60% );
-  background:var(--c3);
+  transform: translate(0%, -60%);
+  background: var(--text-bg-c);
   padding: 1% 0 1% 0;
   backdrop-filter: blur(20px);
-  
 }
 .marquee2 {
   top: 50%;
-  transform: translate( 0%, 39% );
-  background:var(--c4);
+  transform: translate(0%, 39%);
+  background: var(--text-bg-d);
   padding: 1% 0 1% 0;
   backdrop-filter: blur(6px);
 }
 .marquee__content > li.text {
   flex: 0 0 auto;
-  color: var(--text-c);
-  background: var( --text-bg-c );
   margin: 2px;
   padding: 0.825rem 1.725rem;
   border-radius: 5rem;
@@ -38,9 +32,6 @@
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 600;
 }
-
-
-
 
 .marquee {
   width: 100%;
@@ -61,8 +52,6 @@
   overflow: hidden;
   user-select: none;
   gap: var(--gap);
-  
-  
 }
 
 .marquee__content {
@@ -72,9 +61,8 @@
   gap: var(--gap);
   min-width: 100%;
   list-style-type: none;
-  align-items:center;
+  align-items: center;
 }
-
 
 /* Marquee Animation & Reverse animation */
 @keyframes marquee_scroll {
@@ -94,123 +82,157 @@
 
 /*======================== Spinner CSS ==================================*/
 
-
 /* Spinner 1 */
 .spinner1 {
-   width: 56px;
-   height: 56px;
-   border-radius: 50%;
-   border: 9px solid;
-   border-color: var( --preloader-c1 );
-   border-right-color: var( --preloader-c2 );
-   animation: spinner1 1s infinite linear;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: var(--preloader-c1);
+  border-right-color: var(--preloader-c2);
+  animation: spinner1 1s infinite linear;
 }
 
 @keyframes spinner1 {
-   to {
-      transform: rotate(1turn);
-   }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 /* Spinner 2 */
 .spinner2 {
-   width: 56px;
-   height: 56px;
-   display: grid;
-   animation: spinner2 4s infinite;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  animation: spinner2 4s infinite;
 }
 
 .spinner2::before,
 .spinner2::after {
-   content: "";
-   grid-area: 1/1;
-   border: 9px solid;
-   border-radius: 50%;
-   border-color: var( --preloader-c1 ) var( --preloader-c1 ) #0000 #0000;
-   mix-blend-mode: darken;
-   animation: spinner2 1s infinite linear;
+  content: "";
+  grid-area: 1/1;
+  border: 9px solid;
+  border-radius: 50%;
+  border-color: var(--preloader-c1) var(--preloader-c1) #0000 #0000;
+  mix-blend-mode: darken;
+  animation: spinner2 1s infinite linear;
 }
 
 .spinner2::after {
-   border-color: #0000 #0000 var( --preloader-c2 ) var( --preloader-c2 );
-   animation-direction: reverse;
+  border-color: #0000 #0000 var(--preloader-c2) var(--preloader-c2);
+  animation-direction: reverse;
 }
 
 @keyframes spinner2 {
-   100% {
-      transform: rotate(1turn);
-   }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
-
 .spinner3 {
-   width: 56px;
-   height: 56px;
-   border-radius: 50%;
-   padding: 6.7px;
-   background: conic-gradient(from 135deg at top,var( --preloader-c2 ) 90deg, #0000 0) 0 calc(50% - 4.5px)/19px 9.5px,
-          radial-gradient(farthest-side at bottom left,#0000 calc(100% - 6.7px),var( --preloader-c2 ) calc(100% - 5.6px) 99%,#0000) top right/50%  50% content-box content-box,
-          radial-gradient(farthest-side at top,#0000 calc(100% - 6.7px),var( --preloader-c2 ) calc(100% - 5.6px) 99%,#0000) bottom   /100% 50% content-box content-box;
-   background-repeat: no-repeat;
-   animation: spinner3 1s infinite linear;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  padding: 6.7px;
+  background: conic-gradient(
+        from 135deg at top,
+        var(--preloader-c2) 90deg,
+        #0000 0
+      )
+      0 calc(50% - 4.5px) / 19px 9.5px,
+    radial-gradient(
+        farthest-side at bottom left,
+        #0000 calc(100% - 6.7px),
+        var(--preloader-c2) calc(100% - 5.6px) 99%,
+        #0000
+      )
+      top right/50% 50% content-box content-box,
+    radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - 6.7px),
+        var(--preloader-c2) calc(100% - 5.6px) 99%,
+        #0000
+      )
+      bottom / 100% 50% content-box content-box;
+  background-repeat: no-repeat;
+  animation: spinner3 1s infinite linear;
 }
 
 @keyframes spinner3 {
-   100% {
-      transform: rotate(1turn);
-   }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
-
 .spinner4 {
-   width: 56px;
-   height: 56px;
-   border-radius: 50%;
-   background: var( --preloader-c2 );
-   -webkit-mask: radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
-   transform-origin: 50% 40%;
-   animation: spinner4 1s infinite linear;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--preloader-c2);
+  -webkit-mask: radial-gradient(
+    circle closest-side at 50% 40%,
+    #0000 94%,
+    #000
+  );
+  transform-origin: 50% 40%;
+  animation: spinner4 1s infinite linear;
 }
 
 @keyframes spinner4 {
-   100% {
-      transform: rotate(1turn);
-   }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 .spinner5 {
-   --s: 9px;
-   width: 56px;
-   height: 56px;
-   background: var( --preloader-c2 );
-   border-radius: 50%;
-   animation: spinner5 2s infinite linear;
-   clip-path: polygon(0 0,calc(50% - var(--s)) 0,50% var(--s),calc(50% + var(--s)) 0,100% 0,100% calc(50% - var(--s)),calc(100% - var(--s)) 50%,100% calc(50% + var(--s)),100% 100%,calc(50% + var(--s)) 100%, 50% calc(100% - var(--s)),calc(50% - var(--s)) 100%,0 100%,0 calc(50% + var(--s)), var(--s) 50%, 0 calc(50% - var(--s)));
+  --s: 9px;
+  width: 56px;
+  height: 56px;
+  background: var(--preloader-c2);
+  border-radius: 50%;
+  animation: spinner5 2s infinite linear;
+  clip-path: polygon(
+    0 0,
+    calc(50% - var(--s)) 0,
+    50% var(--s),
+    calc(50% + var(--s)) 0,
+    100% 0,
+    100% calc(50% - var(--s)),
+    calc(100% - var(--s)) 50%,
+    100% calc(50% + var(--s)),
+    100% 100%,
+    calc(50% + var(--s)) 100%,
+    50% calc(100% - var(--s)),
+    calc(50% - var(--s)) 100%,
+    0 100%,
+    0 calc(50% + var(--s)),
+    var(--s) 50%,
+    0 calc(50% - var(--s))
+  );
 }
 
 @keyframes spinner5 {
-   100% {
-      transform: rotate(1turn);
-   }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
-
 .spinner6 {
-   width: 56px;
-   height: 56px;
-   border-radius: 50%;
-   background: radial-gradient(farthest-side, var( --preloader-c2 ) 94%,#0000) top/9px 9px no-repeat,
-          conic-gradient(#0000 30%, var( --preloader-c2 ) );
-   -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
-   animation: spinner6 1s infinite linear;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, var(--preloader-c2) 94%, #0000)
+      top/9px 9px no-repeat,
+    conic-gradient(#0000 30%, var(--preloader-c2));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner6 1s infinite linear;
 }
 
 @keyframes spinner6 {
-   100% {
-      transform: rotate(1turn);
-   }
+  100% {
+    transform: rotate(1turn);
+  }
 }
-
 
 .spinner7 {
   width: 50px;
@@ -218,15 +240,12 @@
   display: grid;
 }
 .spinner7::before,
-.spinner7::after {    
-  content:"";
+.spinner7::after {
+  content: "";
   grid-area: 1/1;
-  --c:no-repeat radial-gradient(farthest-side,(#25b09b) 92%,#ff0);
-  background: 
-    var(--c) 50%  0, 
-    var(--c) 50%  100%, 
-    var(--c) 100% 50%, 
-    var(--c) 0    50%;
+  --c: no-repeat radial-gradient(farthest-side, (#25b09b) 92%, #ff0);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
   background-size: 12px 12px;
   animation: l12 1s infinite;
 }
@@ -234,72 +253,91 @@
   margin: 4px;
   filter: hue-rotate(45deg);
   background-size: 8px 8px;
-  animation-timing-function: linear
+  animation-timing-function: linear;
 }
 
-@keyframes l12 { 
-  100%{transform: rotate(.5turn)}
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
 }
-
 
 .spinner8 {
-  --d:22px;
+  --d: 22px;
   width: 4px;
   height: 4px;
   border-radius: 50%;
   color: #25b09b;
-  box-shadow: 
-    calc(1*var(--d))      calc(0*var(--d))     0 0,
-    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
-    calc(0*var(--d))      calc(1*var(--d))     0 2px,
-    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
-    calc(-1*var(--d))     calc(0*var(--d))     0 4px,
-    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
-    calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+  box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0,
+    calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1px,
+    calc(0 * var(--d)) calc(1 * var(--d)) 0 2px,
+    calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3px,
+    calc(-1 * var(--d)) calc(0 * var(--d)) 0 4px,
+    calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px,
+    calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px;
   animation: l27 1s infinite steps(8);
 }
 @keyframes l27 {
-  100% {transform: rotate(1turn)}
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 .spinner9 {
-width: 11.2px;
-   height: 11.2px;
-   border-radius: 11.2px;
-   box-shadow: 28px 0px 0 0 var(--preloader-c1), 22.7px 16.5px 0 0 var(--preloader-c1), 8.68px 26.6px 0 0 var(--preloader-c1), -8.68px 26.6px 0 0 var(--preloader-c1), -22.7px 16.5px 0 0 #474bff;
-   animation: spinner-b87k6z 1s infinite linear;
+  width: 11.2px;
+  height: 11.2px;
+  border-radius: 11.2px;
+  box-shadow: 28px 0px 0 0 var(--preloader-c1),
+    22.7px 16.5px 0 0 var(--preloader-c1), 8.68px 26.6px 0 0 var(--preloader-c1),
+    -8.68px 26.6px 0 0 var(--preloader-c1), -22.7px 16.5px 0 0 #474bff;
+  animation: spinner-b87k6z 1s infinite linear;
 }
 
 @keyframes spinner-b87k6z {
-   to {
-      transform: rotate(360deg);
-   }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-
 
 .spinner10 {
   height: 40px;
   aspect-ratio: 1.5;
-  --c:no-repeat linear-gradient(#73ff00 0 0);
-  --d:no-repeat linear-gradient(#26b3d6 0 0);
-  --e:no-repeat linear-gradient(#ee8ce6 0 0);
+  --c: no-repeat linear-gradient(#73ff00 0 0);
+  --d: no-repeat linear-gradient(#26b3d6 0 0);
+  --e: no-repeat linear-gradient(#ee8ce6 0 0);
   background: var(--c), var(--d), var(--e), var(--c);
   background-size: 33.4% 50%;
   animation: l3 2s infinite linear;
 }
 @keyframes l3 {
-  0%    {background-position:0 0,50% 0,0 100%,50% 100%}
-  12.5% {background-position:0 0,100% 0,0 100%,50% 100%}
-  25%   {background-position:50% 0,100% 0,0 100%,50% 100%}
-  37.5% {background-position:50% 0,100% 0,0 100%,100% 100%}
-  50%   {background-position:50% 0,100% 0,50% 100%,100% 100%}
-  62.5% {background-position:0 0,100% 0,50% 100%,100% 100%}
-  75%   {background-position:0 0,50% 0,50% 100%,100% 100%}
-  87.5% {background-position:0 0,50% 0,0 100%,100% 100%}
-  100%  {background-position:0 0,50% 0,0 100%,50% 100%}
+  0% {
+    background-position: 0 0, 50% 0, 0 100%, 50% 100%;
+  }
+  12.5% {
+    background-position: 0 0, 100% 0, 0 100%, 50% 100%;
+  }
+  25% {
+    background-position: 50% 0, 100% 0, 0 100%, 50% 100%;
+  }
+  37.5% {
+    background-position: 50% 0, 100% 0, 0 100%, 100% 100%;
+  }
+  50% {
+    background-position: 50% 0, 100% 0, 50% 100%, 100% 100%;
+  }
+  62.5% {
+    background-position: 0 0, 100% 0, 50% 100%, 100% 100%;
+  }
+  75% {
+    background-position: 0 0, 50% 0, 50% 100%, 100% 100%;
+  }
+  87.5% {
+    background-position: 0 0, 50% 0, 0 100%, 100% 100%;
+  }
+  100% {
+    background-position: 0 0, 50% 0, 0 100%, 50% 100%;
+  }
 }
-
 
 .spinner11 {
   width: 60px;
@@ -308,68 +346,99 @@ width: 11.2px;
   animation: l11 2s infinite;
 }
 @keyframes l11 {
-  0%   {background: conic-gradient(#f03355 0     ,#0000 0)}
-  12.5%{background: conic-gradient(#f03355 45deg ,#0000 46deg)}
-  25%  {background: conic-gradient(#f03355 90deg ,#0000 91deg)}
-  37.5%{background: conic-gradient(#f03355 135deg,#0000 136deg)}
-  50%  {background: conic-gradient(#f03355 180deg,#0000 181deg)}
-  62.5%{background: conic-gradient(#f03355 225deg,#0000 226deg)}
-  75%  {background: conic-gradient(#f03355 270deg,#0000 271deg)}
-  87.5%{background: conic-gradient(#f03355 315deg,#0000 316deg)}
-  100% {background: conic-gradient(#f03355 360deg,#0000 360deg)}
+  0% {
+    background: conic-gradient(#f03355 0, #0000 0);
+  }
+  12.5% {
+    background: conic-gradient(#f03355 45deg, #0000 46deg);
+  }
+  25% {
+    background: conic-gradient(#f03355 90deg, #0000 91deg);
+  }
+  37.5% {
+    background: conic-gradient(#f03355 135deg, #0000 136deg);
+  }
+  50% {
+    background: conic-gradient(#f03355 180deg, #0000 181deg);
+  }
+  62.5% {
+    background: conic-gradient(#f03355 225deg, #0000 226deg);
+  }
+  75% {
+    background: conic-gradient(#f03355 270deg, #0000 271deg);
+  }
+  87.5% {
+    background: conic-gradient(#f03355 315deg, #0000 316deg);
+  }
+  100% {
+    background: conic-gradient(#f03355 360deg, #0000 360deg);
+  }
 }
-
 
 .spinner12 {
   width: 50px;
   aspect-ratio: 1;
-  --c:no-repeat radial-gradient(farthest-side,#514b82 92%,#0000);
-  background: 
-    var(--c) 50%  0, 
-    var(--c) 50%  100%, 
-    var(--c) 100% 50%, 
-    var(--c) 0    50%;
+  --c: no-repeat radial-gradient(farthest-side, #514b82 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
   background-size: 10px 10px;
   animation: l18 1s infinite;
   position: relative;
 }
-.spinner12::before {    
-  content:"";
+.spinner12::before {
+  content: "";
   position: absolute;
-  inset:0;
+  inset: 0;
   margin: 3px;
-  background: repeating-conic-gradient(#0000 0 35deg,#514b82 0 90deg);
-  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+  background: repeating-conic-gradient(#0000 0 35deg, #514b82 0 90deg);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
   border-radius: 50%;
 }
-@keyframes l18 { 
-  100%{transform: rotate(.5turn)}
+@keyframes l18 {
+  100% {
+    transform: rotate(0.5turn);
+  }
 }
-
 
 .spinner13 {
-    width: 40px;
-    height: 40px;
-    --c:no-repeat linear-gradient(orange 0 0);
-    background: var(--c),var(--c),var(--c),var(--c);
-    background-size: 21px 21px;
-    animation: l5 1.5s infinite cubic-bezier(0.3,1,0,1);
+  width: 40px;
+  height: 40px;
+  --c: no-repeat linear-gradient(orange 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 21px 21px;
+  animation: l5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
 }
 @keyframes l5 {
-   0%   {background-position: 0    0,100% 0   ,100% 100%,0 100%}
-   33%  {background-position: 0    0,100% 0   ,100% 100%,0 100%;width:60px;height: 60px}
-   66%  {background-position: 100% 0,100% 100%,0    100%,0 0   ;width:60px;height: 60px}
-   100% {background-position: 100% 0,100% 100%,0    100%,0 0   }
+  0% {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  }
+  33% {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    width: 60px;
+    height: 60px;
+  }
+  66% {
+    background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+    width: 60px;
+    height: 60px;
+  }
+  100% {
+    background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+  }
 }
-
 
 .spinner14 {
   width: 80px;
   aspect-ratio: 1;
-  background: 
-    radial-gradient(farthest-side at top,#0000 calc(100% - 21px),lightblue calc(100% - 20px) 99%,#0000) bottom/100% 50%,
-    radial-gradient(farthest-side,lightblue 94%,#0000 ) left /20px 20px,
-    radial-gradient(farthest-side,lightblue 94%,#0000 ) right/20px 20px;
+  background: radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - 21px),
+        lightblue calc(100% - 20px) 99%,
+        #0000
+      )
+      bottom/100% 50%,
+    radial-gradient(farthest-side, lightblue 94%, #0000) left / 20px 20px,
+    radial-gradient(farthest-side, lightblue 94%, #0000) right/20px 20px;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -383,10 +452,12 @@ width: 11.2px;
   border-radius: 50%;
   background: orange;
   transform-origin: 50% -20px;
-  animation: l14 1s infinite cubic-bezier(0.5,623,0.5,-623);
+  animation: l14 1s infinite cubic-bezier(0.5, 623, 0.5, -623);
 }
-@keyframes l14 { 
- 100% {transform: rotate(0.5deg)}
+@keyframes l14 {
+  100% {
+    transform: rotate(0.5deg);
+  }
 }
 
 .spinner16 {
@@ -397,15 +468,15 @@ width: 11.2px;
   text-transform: uppercase;
   color: #0000;
   -webkit-text-stroke: 1px #00ff55;
-  --g:conic-gradient(#00ff22 0 0) no-repeat text;
-  background:var(--g) 0,var(--g) 1ch,var(--g) 2ch,var(--g) 3ch,var(--g) 4ch,var(--g) 5ch,var(--g) 6ch;
+  --g: conic-gradient(#00ff22 0 0) no-repeat text;
+  background: var(--g) 0, var(--g) 1ch, var(--g) 2ch, var(--g) 3ch, var(--g) 4ch,
+    var(--g) 5ch, var(--g) 6ch;
   background-position-y: 100%;
   animation: l19 1.5s linear infinite alternate;
 }
 .spinner16:before {
   content: "Please wait";
 }
-
 
 .spinner17 {
   width: fit-content;
@@ -414,26 +485,45 @@ width: 11.2px;
   font-weight: bold;
   text-transform: uppercase;
   color: #0000;
-  -webkit-text-stroke: 1px var(--preloader-c3);
-  background: linear-gradient(90deg,#0000 33%,var(--preloader-c3) 0 67%,#0000 0) 100%/300% 100% no-repeat text;
+  -webkit-text-stroke: 1px var(--preloader-c1);
+  background: linear-gradient(
+      90deg,
+      #0000 33%,
+      var(--preloader-c1) 0 67%,
+      #0000 0
+    )
+    100%/300% 100% no-repeat text;
   animation: l12 4s steps(14) infinite;
 }
 .spinner17:before {
   content: "Loading Now";
 }
 @keyframes l12 {
-  to {background-position: 0}
+  to {
+    background-position: 0;
+  }
 }
-
 
 @keyframes l19 {
-  0%  {background-size: 1ch 0   ,1ch 0   ,1ch 0   ,1ch 0   ,1ch 0   ,1ch 0   ,1ch 0   }
-  25% {background-size: 1ch 100%,1ch 50% ,1ch 0   ,1ch 0   ,1ch 0   ,1ch 50% ,1ch 100%}
-  50% {background-size: 1ch 100%,1ch 100%,1ch 50% ,1ch 0   ,1ch 50% ,1ch 100%,1ch 100%}
-  75% {background-size: 1ch 100%,1ch 100%,1ch 100%,1ch 50% ,1ch 100%,1ch 100%,1ch 100%}
-  to  {background-size: 1ch 100%,1ch 100%,1ch 100%,1ch 100%,1ch 100%,1ch 100%,1ch 100%}
+  0% {
+    background-size: 1ch 0, 1ch 0, 1ch 0, 1ch 0, 1ch 0, 1ch 0, 1ch 0;
+  }
+  25% {
+    background-size: 1ch 100%, 1ch 50%, 1ch 0, 1ch 0, 1ch 0, 1ch 50%, 1ch 100%;
+  }
+  50% {
+    background-size: 1ch 100%, 1ch 100%, 1ch 50%, 1ch 0, 1ch 50%, 1ch 100%,
+      1ch 100%;
+  }
+  75% {
+    background-size: 1ch 100%, 1ch 100%, 1ch 100%, 1ch 50%, 1ch 100%, 1ch 100%,
+      1ch 100%;
+  }
+  to {
+    background-size: 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%, 1ch 100%,
+      1ch 100%;
+  }
 }
-
 
 .spinner18 {
   width: 60px;
@@ -444,34 +534,50 @@ width: 11.2px;
 .spinner18::after {
   content: "";
   position: absolute;
-  inset:0 50% 50% 0;
-  transform-origin: bottom right; 
-  animation: 
-    l5-1 0.5s infinite linear alternate,
+  inset: 0 50% 50% 0;
+  transform-origin: bottom right;
+  animation: l5-1 0.5s infinite linear alternate,
     l5-2 0.5s infinite steps(1) alternate;
 }
 .spinner18::after {
-  --s:-1,-1;
+  --s: -1, -1;
 }
 @keyframes l5-0 {
-  0%  {transform:scale(1, 1) rotate(0deg)}
-  50% {transform:scale(1,-1) rotate(90deg)}
+  0% {
+    transform: scale(1, 1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1, -1) rotate(90deg);
+  }
 }
 
 @keyframes l5-1 {
-  0%   {transform:scale(var(--s,1)) perspective(150px) rotateX(  0deg)}
-  100% {transform:scale(var(--s,1)) perspective(150px) rotateX(180deg)}
+  0% {
+    transform: scale(var(--s, 1)) perspective(150px) rotateX(0deg);
+  }
+  100% {
+    transform: scale(var(--s, 1)) perspective(150px) rotateX(180deg);
+  }
 }
 @keyframes l5-2 {
-  0% {background:#25b09b}
-  50%{background:#514b82}
+  0% {
+    background: #25b09b;
+  }
+  50% {
+    background: #514b82;
+  }
 }
-
 
 .spinner19 {
   width: 100px;
   height: 40px;
-  --g: radial-gradient(farthest-side,#0000 calc(95% - 3px),#fff calc(100% - 3px) 98%,#0000 101%) no-repeat;
+  --g: radial-gradient(
+      farthest-side,
+      #0000 calc(95% - 3px),
+      #fff calc(100% - 3px) 98%,
+      #0000 101%
+    )
+    no-repeat;
   background: var(--g), var(--g), var(--g);
   background-size: 30px 30px;
   animation: l9 1s infinite alternate;
@@ -496,8 +602,6 @@ width: 11.2px;
     background-position: 0 50%, 50% 50%, 100% 50%;
   }
 }
-
-
 
 .spinner20 {
   width: 65px;
@@ -545,43 +649,51 @@ width: 11.2px;
   }
 }
 
-
-
 .spinner21 {
   width: 80px;
   aspect-ratio: 1;
-  --c: #8d7958 91%,#0000;
-  background:
-    radial-gradient(30% 50% at -3px             55%, var(--c)) top    right,
-    radial-gradient(30% 50% at -3px             45%, var(--c)) bottom right,
-    radial-gradient(30% 50% at calc(100% + 3px) 55%, var(--c)) top    left,
+  --c: #8d7958 91%, #0000;
+  background: radial-gradient(30% 50% at -3px 55%, var(--c)) top right,
+    radial-gradient(30% 50% at -3px 45%, var(--c)) bottom right,
+    radial-gradient(30% 50% at calc(100% + 3px) 55%, var(--c)) top left,
     radial-gradient(30% 50% at calc(100% + 3px) 45%, var(--c)) bottom left,
-    radial-gradient(50% 30% at 45% calc(100% + 3px), var(--c)) top    right,
-    radial-gradient(50% 30% at 45% -3px            , var(--c)) bottom right,
-    radial-gradient(50% 30% at 55% calc(100% + 3px), var(--c)) top    left,
-    radial-gradient(50% 30% at 55% -3px            , var(--c)) bottom left;
+    radial-gradient(50% 30% at 45% calc(100% + 3px), var(--c)) top right,
+    radial-gradient(50% 30% at 45% -3px, var(--c)) bottom right,
+    radial-gradient(50% 30% at 55% calc(100% + 3px), var(--c)) top left,
+    radial-gradient(50% 30% at 55% -3px, var(--c)) bottom left;
   background-size: 50.1% 50.1%;
   background-repeat: no-repeat;
-  -webkit-mask: radial-gradient(circle 5px,#0000 90%,#000);
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
   animation: l8 1.5s infinite linear;
 }
-@keyframes l8 { 
-  100%{transform: rotate(1turn)}
+@keyframes l8 {
+  100% {
+    transform: rotate(1turn);
+  }
 }
-
 
 .spinner22 {
   width: 80px;
   aspect-ratio: 1;
   background: #8d7958;
-  clip-path: polygon(100.00% 50.00%,64.14% 64.14%,50.00% 100.00%,35.86% 64.14%,0.00% 50.00%,35.86% 35.86%,50.00% 0.00%,64.14% 35.86%);
-  -webkit-mask:radial-gradient(circle 5px,#0000 90%,#000);
+  clip-path: polygon(
+    100% 50%,
+    64.14% 64.14%,
+    50% 100%,
+    35.86% 64.14%,
+    0% 50%,
+    35.86% 35.86%,
+    50% 0%,
+    64.14% 35.86%
+  );
+  -webkit-mask: radial-gradient(circle 5px, #0000 90%, #000);
   animation: l1 1.5s infinite linear;
 }
-@keyframes l1{ 
-  100%{transform: rotate(1turn)}
+@keyframes l1 {
+  100% {
+    transform: rotate(1turn);
+  }
 }
-
 
 .spinner23 {
   width: 28px;
@@ -592,73 +704,142 @@ width: 11.2px;
 }
 @keyframes l2 {
   0%,
-  100%{transform:translate(-35px);box-shadow:  0     0 var(--preloader-c1), 0     0 var(--preloader-c2)}
-  40% {transform:translate( 35px);box-shadow: -15px  0 var(--preloader-c1),-30px  0 var(--preloader-c2)}
-  50% {transform:translate( 35px);box-shadow:  0     0 var(--preloader-c1), 0     0 var(--preloader-c2)}
-  90% {transform:translate(-35px);box-shadow:  15px  0 var(--preloader-c1), 30px  0 var(--preloader-c2)}
+  100% {
+    transform: translate(-35px);
+    box-shadow: 0 0 var(--preloader-c1), 0 0 var(--preloader-c2);
+  }
+  40% {
+    transform: translate(35px);
+    box-shadow: -15px 0 var(--preloader-c1), -30px 0 var(--preloader-c2);
+  }
+  50% {
+    transform: translate(35px);
+    box-shadow: 0 0 var(--preloader-c1), 0 0 var(--preloader-c2);
+  }
+  90% {
+    transform: translate(-35px);
+    box-shadow: 15px 0 var(--preloader-c1), 30px 0 var(--preloader-c2);
+  }
 }
-
 
 .spinner24 {
   width: 80px;
   aspect-ratio: 1.154;
-  background: repeating-conic-gradient(from -30deg,var(--preloader-c1) 0 60deg,(var(--preloader-c2)) 0 120deg,#BF1E62 0 180deg); 
+  background: repeating-conic-gradient(
+    from -30deg,
+    var(--preloader-c1) 0 60deg,
+    (var(--preloader-c2)) 0 120deg,
+    #bf1e62 0 180deg
+  );
   animation: l13 1.5s infinite alternate;
 }
 @keyframes l13 {
   0%,
-  10%  {clip-path: polygon(50% 50%,25% 100%,25% 100%,25% 100%,25% 100%,75% 100%,75% 100%,75% 100%)}
+  10% {
+    clip-path: polygon(
+      50% 50%,
+      25% 100%,
+      25% 100%,
+      25% 100%,
+      25% 100%,
+      75% 100%,
+      75% 100%,
+      75% 100%
+    );
+  }
   33%,
-  43%  {clip-path: polygon(50% 50%,0   50% ,0   50% ,0   50% ,25% 100%,75% 100%,100% 50%,100% 50%)}
+  43% {
+    clip-path: polygon(
+      50% 50%,
+      0 50%,
+      0 50%,
+      0 50%,
+      25% 100%,
+      75% 100%,
+      100% 50%,
+      100% 50%
+    );
+  }
   66%,
-  76%  {clip-path: polygon(50% 50%,25% 0   ,25% 0   ,0   50% ,25% 100%,75% 100%,100% 50%,75%  0  )}
+  76% {
+    clip-path: polygon(
+      50% 50%,
+      25% 0,
+      25% 0,
+      0 50%,
+      25% 100%,
+      75% 100%,
+      100% 50%,
+      75% 0
+    );
+  }
   95%,
-  100% {clip-path: polygon(50% 50%,75% 0   ,25% 0   ,0   50% ,25% 100%,75% 100%,100% 50%,75%  0  )}
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      75% 0,
+      25% 0,
+      0 50%,
+      25% 100%,
+      75% 100%,
+      100% 50%,
+      75% 0
+    );
+  }
 }
-
 
 .spinner25 {
   width: 90px;
   height: 14px;
   box-shadow: 0 3px 0 #fff;
   position: relative;
-  clip-path: inset(-40px 0 -5px)
+  clip-path: inset(-40px 0 -5px);
 }
 .spinner25:before {
   content: "";
   position: absolute;
   inset: auto calc(50% - 17px) 0;
   height: 50px;
-  --g:no-repeat linear-gradient(#ccc 0 0);
-  background: var(--g),var(--g),var(--g),var(--g);
+  --g: no-repeat linear-gradient(#ccc 0 0);
+  background: var(--g), var(--g), var(--g), var(--g);
   background-size: 16px 14px;
-  animation:
-    l7-1 2s infinite linear,
-    l7-2 2s infinite linear;
+  animation: l7-1 2s infinite linear, l7-2 2s infinite linear;
 }
 @keyframes l7-1 {
   0%,
-  100%  {background-position: 0 -50px,100% -50px}
-  17.5% {background-position: 0 100%,100% -50px,0 -50px,100% -50px}
-  35%   {background-position: 0 100%,100% 100% ,0 -50px,100% -50px}
-  52.5% {background-position: 0 100%,100% 100% ,0 calc(100% - 16px),100% -50px}
+  100% {
+    background-position: 0 -50px, 100% -50px;
+  }
+  17.5% {
+    background-position: 0 100%, 100% -50px, 0 -50px, 100% -50px;
+  }
+  35% {
+    background-position: 0 100%, 100% 100%, 0 -50px, 100% -50px;
+  }
+  52.5% {
+    background-position: 0 100%, 100% 100%, 0 calc(100% - 16px), 100% -50px;
+  }
   70%,
-  98%  {background-position: 0 100%,100% 100% ,0 calc(100% - 16px),100% calc(100% - 16px)}
+  98% {
+    background-position: 0 100%, 100% 100%, 0 calc(100% - 16px),
+      100% calc(100% - 16px);
+  }
 }
 @keyframes l7-2 {
-  0%,70% {transform:translate(0)}
-  100%  {transform:translate(200%)}
+  0%,
+  70% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(200%);
+  }
 }
-
-
 
 .spinner26 {
   height: 15px;
   aspect-ratio: 4;
-  --_g: no-repeat radial-gradient(farthest-side,#ffffff 90%,#0000);
-  background: 
-    var(--_g) left, 
-    var(--_g) right;
+  --_g: no-repeat radial-gradient(farthest-side, #ffffff 90%, #0000);
+  background: var(--_g) left, var(--_g) right;
   background-size: 25% 100%;
   display: grid;
 }
@@ -676,221 +857,279 @@ width: 11.2px;
 }
 .spinner26:after {
   transform-origin: 200% 50%;
-  --s:-1;
-  animation-delay: -.5s;
+  --s: -1;
+  animation-delay: -0.5s;
 }
 
 @keyframes l49 {
   58%,
-  100% {transform: rotate(calc(var(--s,1)*1turn))}
+  100% {
+    transform: rotate(calc(var(--s, 1) * 1turn));
+  }
 }
 
-
 .spinner27 {
-    animation: rotate 1s infinite;
-    height: 50px;
-    width: 50px;
-  }
+  animation: rotate 1s infinite;
+  height: 50px;
+  width: 50px;
+}
 
-  .spinner27:before,
-  .spinner27:after {
-    border-radius: 50%;
-    content: "";
-    display: block;
-    height: 20px;
-    width: 20px;
+.spinner27:before,
+.spinner27:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.spinner27:before {
+  animation: ball1 1s infinite;
+  background-color: #fff;
+  box-shadow: 30px 0 0 #ff3d00;
+  margin-bottom: 10px;
+}
+.spinner27:after {
+  animation: ball2 1s infinite;
+  background-color: #ff3d00;
+  box-shadow: 30px 0 0 #fff;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8);
   }
-  .spinner27:before {
-    animation: ball1 1s infinite;
-    background-color: #fff;
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #ff3d00;
+  }
+  50% {
+    box-shadow: 0 0 0 #ff3d00;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
     box-shadow: 30px 0 0 #ff3d00;
     margin-bottom: 10px;
   }
-  .spinner27:after {
-    animation: ball2 1s infinite;
-    background-color: #ff3d00;
+}
+
+@keyframes ball2 {
+  0% {
     box-shadow: 30px 0 0 #fff;
   }
-
-  @keyframes rotate {
-    0% { transform: rotate(0deg) scale(0.8) }
-    50% { transform: rotate(360deg) scale(1.2) }
-    100% { transform: rotate(720deg) scale(0.8) }
-  }
-
-  @keyframes ball1 {
-    0% {
-      box-shadow: 30px 0 0 #ff3d00;
-    }
-    50% {
-      box-shadow: 0 0 0 #ff3d00;
-      margin-bottom: 0;
-      transform: translate(15px, 15px);
-    }
-    100% {
-      box-shadow: 30px 0 0 #ff3d00;
-      margin-bottom: 10px;
-    }
-  }
-
-  @keyframes ball2 {
-    0% {
-      box-shadow: 30px 0 0 #fff;
-    }
-    50% {
-      box-shadow: 0 0 0 #fff;
-      margin-top: -20px;
-      transform: translate(15px, 15px);
-    }
-    100% {
-      box-shadow: 30px 0 0 #fff;
-      margin-top: 0;
-    }
-  }
-  
-  .spinner28 {
-    position: relative;
-    width:  48px;
-    height: 48px;
-    background: #de3500;
-    transform: rotateX(65deg) rotate(45deg);
-    
-    /* //transform: perspective(200px) rotateX(65deg) rotate(45deg);  */
-    color: #fff;
-    animation: layers1 1s linear infinite alternate;
-  }
-  .spinner28:after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.7);
-    animation: layerTr 1s linear infinite alternate;
-  }
-
-  @keyframes layers1 {
-    0% { box-shadow: 0px 0px 0 0px  }
-   90% , 100% { box-shadow: 20px 20px 0 -4px  }
-  }
-  @keyframes layerTr {
-    0% { transform:  translate(0, 0) scale(1) }
-    100% {  transform: translate(-25px, -25px) scale(1) }
-  }
-      
- 
-  .spinner29 {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 32px 0 #fff, -32px 0 #fff;
-  position: relative;
-  animation: flash 0.5s ease-out infinite alternate;
-}
-
-@keyframes flash {
-  0% {
-    background-color: #FFF2;
-    box-shadow: 32px 0 #FFF2, -32px 0 #FFF;
-  }
   50% {
-    background-color: #FFF;
-    box-shadow: 32px 0 #FFF2, -32px 0 #FFF2;
+    box-shadow: 0 0 0 #fff;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
   }
   100% {
-    background-color: #FFF2;
-    box-shadow: 32px 0 #FFF, -32px 0 #FFF2;
+    box-shadow: 30px 0 0 #fff;
+    margin-top: 0;
   }
 }
 
+.spinner28 {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: #de3500;
+  transform: rotateX(65deg) rotate(45deg);
 
+  /* //transform: perspective(200px) rotateX(65deg) rotate(45deg);  */
+  color: #fff;
+  animation: layers1 1s linear infinite alternate;
+}
+.spinner28:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  animation: layerTr 1s linear infinite alternate;
+}
 
-.spinner30 {
-  width: 38px;
-  height: 38px;
+@keyframes layers1 {
+  0% {
+    box-shadow: 0px 0px 0 0px;
+  }
+  90%,
+  100% {
+    box-shadow: 20px 20px 0 -4px;
+  }
+}
+@keyframes layerTr {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-25px, -25px) scale(1);
+  }
+}
+
+.spinner29 {
+  width: 48px;
+  height: 48px;
+  border: 4px solid;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: transparent var(--preloader-c1) var(--preloader-c1) transparent;
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  border: 5px solid;
   box-sizing: border-box;
-  animation: animloader 1s linear infinite alternate;
+  animation: rotation 1s ease-in-out infinite;
 }
-@keyframes animloader {
+.spinner29::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 12px solid;
+  border-color: transparent var(--preloader-c2) var(--preloader-c2) transparent;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+@keyframes rotation {
   0% {
-    border-color: var(--preloader-c3) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
-  }
-  33% {
-    border-color: var(--preloader-c3) var(--preloader-c3) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
-  }
-  66% {
-    border-color: var(--preloader-c3) var(--preloader-c3) var(--preloader-c3) rgba(255, 255, 255, 0);
+    transform: rotate(0deg);
   }
   100% {
-    border-color: var(--preloader-c3) var(--preloader-c3) var(--preloader-c3) var(--preloader-c3);
+    transform: rotate(360deg);
   }
-} 
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.spinner30 {
+  border: 2px solid;
+  border-color: transparent #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+.spinner30::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 24px solid;
+  border-color: transparent var(--preloader-c1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /*======================== Background Design CSS ========================*/
-.cover1{ z-index:1; }
-.cover2{ z-index:2; }
-.cover3{ z-index:3; }
-.cover4{ z-index:4; }
-.cover5{ z-index:5; }
+.cover1 {
+  z-index: 1;
+}
+.cover2 {
+  z-index: 2;
+}
+.cover3 {
+  z-index: 3;
+}
+.cover4 {
+  z-index: 4;
+}
+.cover5 {
+  z-index: 5;
+}
 
 .color1 {
   --text-c: #fff;
-  --text-bg-c: #666;
-  --preloader-c1: #dbdcef;
-  --preloader-c2: #474bff;
-  --preloader-c3: #ffc320;
-  --c1: #3fbcf7;
-  --c2: #f86db7;
-  --c3: rgba(156, 88, 212, 0.699);
-  --c4: rgba(73, 49, 160, 0.767);
+  --text-bg-c: #006eeccc;
+  --text-bg-d: #00bbb2bb;
+  --preloader-c1: #66ff00;
+  --preloader-c2: #ff0faf;
+  --preloader-c3: #ff6b09;
+  --c1: #28e6ff;
+  --c2: #ff6ceb;
+  --c3: transparent;
+  --c4: transparent;
 }
 
-
 div.design1 {
-    --s: 85px; /* control the size*/
-    --g1:conic-gradient(from  45deg at 62.5% 12.5%,#0000 75%,var(--c1) 0);
-    --g2:conic-gradient(from -45deg at 12.5% 12.5%,#0000 75%,var(--c1) 0);
-    --g3:conic-gradient(from 225deg at 87.5% 87.5%,#0000 75%,var(--c2) 0);
-    --g4:conic-gradient(from 135deg at 87.5% 37.5%,#0000 75%,var(--c2) 0);
-    background:
-      var(--g4),var(--g4) var(--s) var(--s),
-      var(--g3),var(--g3) var(--s) var(--s),
-      var(--g2),var(--g2) var(--s) var(--s),
-      var(--g1),var(--g1) var(--s) var(--s),
-      repeating-linear-gradient(135deg,var(--c2) 0 12.5%,var(--c1) 0 25%);
-    background-size: calc(2*var(--s)) calc(2*var(--s))
-  
-  }
+  --s: 85px; /* control the size*/
+  --g1: conic-gradient(from 45deg at 62.5% 12.5%, #0000 75%, var(--c1) 0);
+  --g2: conic-gradient(from -45deg at 12.5% 12.5%, #0000 75%, var(--c1) 0);
+  --g3: conic-gradient(from 225deg at 87.5% 87.5%, #0000 75%, var(--c2) 0);
+  --g4: conic-gradient(from 135deg at 87.5% 37.5%, #0000 75%, var(--c2) 0);
+  background: var(--g4), var(--g4) var(--s) var(--s), var(--g3),
+    var(--g3) var(--s) var(--s), var(--g2), var(--g2) var(--s) var(--s),
+    var(--g1), var(--g1) var(--s) var(--s),
+    repeating-linear-gradient(135deg, var(--c2) 0 12.5%, var(--c1) 0 25%);
+  background-size: calc(2 * var(--s)) calc(2 * var(--s));
+}
 
 .color2 {
   --text-c: #fff;
-  --text-bg-c: #f70;
-  --preloader-c1: #dbdcef;
-  --preloader-c2: #474bff;
-  --preloader-c3: #d4ff5e;
-  --c1: #f1a649;
-  --c2: rgb(205, 255, 217);
-  --c3: #886233d7;
-  --c4: rgba(113, 177, 54, 0.815);
+  --text-bg-c: #695f02a2;
+  --text-bg-d: #7ab60ad3;
+  --preloader-c1: #eeff00;
+  --preloader-c2: #ff5e00;
+  --preloader-c3: #ffee00;
+  --c1: #ff9f31;
+  --c2: #fffb00;
+  --c3: #0fac70;
+  --c4: transparent;
 }
-
 
 div.design2 {
   --s: 222px; /* control the size*/
-  --_g: var(--c1) 10%,var(--c2) 10.5% 19%,#0000 19.5% 80.5%,var(--c2) 81% 89.5%,var(--c3) 90%;
-  --_c: from -90deg at 37.5% 50%,#0000 75%;
-  --_l1: linear-gradient(145deg,var(--_g));
-  --_l2: linear-gradient( 35deg,var(--_g));
-  background: 
-    var(--_l1), var(--_l1) calc(var(--s)/2) var(--s),
-    var(--_l2), var(--_l2) calc(var(--s)/2) var(--s),
-    conic-gradient(var(--_c),var(--c1) 0) calc(var(--s)/8) 0,
-    conic-gradient(var(--_c),var(--c3) 0) calc(var(--s)/2) 0,
-    linear-gradient(90deg,var(--c3) 38%,var(--c1) 0 50%,var(--c3) 0 62%,var(--c1) 0);
-  background-size: var(--s) calc(2*var(--s)/3);
+  --_g: var(--c1) 10%, var(--c2) 10.5% 19%, #0000 19.5% 80.5%,
+    var(--c2) 81% 89.5%, var(--c3) 90%;
+  --_c: from -90deg at 37.5% 50%, #0000 75%;
+  --_l1: linear-gradient(145deg, var(--_g));
+  --_l2: linear-gradient(35deg, var(--_g));
+  background: var(--_l1), var(--_l1) calc(var(--s) / 2) var(--s), var(--_l2),
+    var(--_l2) calc(var(--s) / 2) var(--s),
+    conic-gradient(var(--_c), var(--c1) 0) calc(var(--s) / 8) 0,
+    conic-gradient(var(--_c), var(--c3) 0) calc(var(--s) / 2) 0,
+    linear-gradient(
+      90deg,
+      var(--c3) 38%,
+      var(--c1) 0 50%,
+      var(--c3) 0 62%,
+      var(--c1) 0
+    );
+  background-size: var(--s) calc(2 * var(--s) / 3);
 }
 
 div.color3 {
@@ -908,13 +1147,21 @@ div.color3 {
 .design3 {
   --s: 150px; /* control the size*/
 
-  
-  background:
-    conic-gradient(from  45deg at 75% 75%, var(--c3) 90deg,var(--c1) 0 180deg,#0000 0),
-    conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg,#0000 0),
-    conic-gradient(from -45deg at 50% 100%,#0000 180deg,var(--c3) 0),
-    conic-gradient(from -45deg,var(--c1) 90deg, var(--c2) 0 225deg,var(--c5) 0);
-  background-size: var(--s) var(--s); 
+  background: conic-gradient(
+      from 45deg at 75% 75%,
+      var(--c3) 90deg,
+      var(--c1) 0 180deg,
+      #0000 0
+    ),
+    conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg, #0000 0),
+    conic-gradient(from -45deg at 50% 100%, #0000 180deg, var(--c3) 0),
+    conic-gradient(
+      from -45deg,
+      var(--c1) 90deg,
+      var(--c2) 0 225deg,
+      var(--c5) 0
+    );
+  background-size: var(--s) var(--s);
 }
 
 .color4 {
@@ -930,20 +1177,24 @@ div.color3 {
 }
 div.design4 {
   --s: 194px; /* control the size*/
-  --_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;
-  --_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);
-  background:
-    var(--_g),var(--_g) 0 calc(var(--s)/2),
-    conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
-    conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
-    linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
-    conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
-    linear-gradient(-150deg,var(--_l)) var(--c3);
-  background-size: calc(0.866*var(--s)) var(--s);
+  --_l: #0000 calc(25% / 3), var(--c1) 0 25%, #0000 0;
+  --_g: conic-gradient(from 120deg at 50% 87.5%, var(--c1) 120deg, #0000 0);
+  background: var(--_g), var(--_g) 0 calc(var(--s) / 2),
+    conic-gradient(from 180deg at 75%, var(--c2) 60deg, #0000 0),
+    conic-gradient(from 60deg at 75% 75%, var(--c1) 0 60deg, #0000 0),
+    linear-gradient(150deg, var(--_l)) 0 calc(var(--s) / 2),
+    conic-gradient(
+      at 25% 25%,
+      #0000 50%,
+      var(--c2) 0 240deg,
+      var(--c1) 0 300deg,
+      var(--c2) 0
+    ),
+    linear-gradient(-150deg, var(--_l)) var(--c3);
+  background-size: calc(0.866 * var(--s)) var(--s);
 }
 
-
-.color5{
+.color5 {
   --text-c: rgb(184, 210, 221);
   --text-d: rgb(11, 22, 27);
   --text-bg-c: #fff0;
@@ -956,20 +1207,26 @@ div.design4 {
   --c4: transparent;
 }
 div.design5 {
-  background: linear-gradient(45deg, #000850 0%, #000320 100%), radial-gradient(100% 225% at 100% 0%, #496a7c 0%, #000000 100%), linear-gradient(225deg, #00ffcd 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 10%, #CDFFEB 35%, #009F9D 35%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+  background: linear-gradient(45deg, #000850 0%, #000320 100%),
+    radial-gradient(100% 225% at 100% 0%, #496a7c 0%, #000000 100%),
+    linear-gradient(225deg, #00ffcd 0%, #000000 100%),
+    linear-gradient(
+      135deg,
+      #cdffeb 10%,
+      #cdffeb 35%,
+      #009f9d 35%,
+      #009f9d 60%,
+      #07456f 60%,
+      #07456f 67%,
+      #0f0a3c 67%,
+      #0f0a3c 100%
+    );
   background-blend-mode: screen, overlay, hard-light, normal;
 }
 
-
-
-
-
-
-
 /* ================================ Semua Yg Dibawah Ini Adalah Preloader Animation =============================*/
 
-
-#preloader-svg{
+#preloader-svg {
   width: 100vw;
   height: 100vh;
 }
@@ -993,31 +1250,68 @@ div.design5 {
     overflow: hidden;
   }
 
-  .cover{
+  .cover {
     animation-fill-mode: both;
   }
-  
-  
-  .cover1 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 0 ); }
-  .cover2 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 1 ); }
-  .cover3 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 2 ); }
-  .cover4 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 3 ); }
-  .cover5 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 4 ); }
+
+  .cover1 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 0
+    );
+  }
+  .cover2 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 1
+    );
+  }
+  .cover3 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 2
+    );
+  }
+  .cover4 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 3
+    );
+  }
+  .cover5 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 4
+    );
+  }
 }
 
-
-#preloader.leave{
-  .cover1 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 4 ); }
-  .cover2 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 3 ); }
-  .cover3 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 2 ); }
-  .cover4 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 1 ); }
-  .cover5 { animation-delay: calc( var(--animation-duration) / var(--animation-delay-divider) * 0 ); }
+#preloader.leave {
+  .cover1 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 4
+    );
+  }
+  .cover2 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 3
+    );
+  }
+  .cover3 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 2
+    );
+  }
+  .cover4 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 1
+    );
+  }
+  .cover5 {
+    animation-delay: calc(
+      var(--animation-duration) / var(--animation-delay-divider) * 0
+    );
+  }
 }
 
+div.cover-container {
+  --drop-shadow-setup: 1px 1px 24px rgba(0, 0, 0, 0.75);
 
-div.cover-container{
-  --drop-shadow-setup: 1px 1px 24px rgba(0,0,0,0.75); 
-  
   /*
   
   filter: drop-shadow( var( --drop-shadow-setup ) );
@@ -1027,52 +1321,56 @@ div.cover-container{
   -o-filter: drop-shadow( var( --drop-shadow-setup ) );
   */
 }
-  
+
 /*======================== Animation CSS ========================*/
-.chevron, .circle, .box, .chevron-left, .chevron2, .chevron2-left {
-  div.cover{
+.chevron,
+.circle,
+.box,
+.chevron-left,
+.chevron2,
+.chevron2-left {
+  div.cover {
     mask-image: none;
   }
 }
 
 .box.enter {
-  div.cover{
-    animation: var( --animation-duration ) box-enter;  
+  div.cover {
+    animation: var(--animation-duration) box-enter;
   }
 }
 .box.leave {
-  div.cover{
-    animation: var( --animation-duration ) box-leave;
+  div.cover {
+    animation: var(--animation-duration) box-leave;
   }
 }
 @keyframes box-enter {
   0% {
-    clip-path: polygon( 0% 0%, 0% 0%, 50% 00%, 50% 0%, 100% 0%, 100% 0% );
+    clip-path: polygon(0% 0%, 0% 0%, 50% 00%, 50% 0%, 100% 0%, 100% 0%);
   }
-  33%{
-    clip-path: polygon( 0% 0%, 0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 0% );
+  33% {
+    clip-path: polygon(0% 0%, 0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 0%);
   }
-  66%{
-    clip-path: polygon( 0% 0%, 0% 100%, 50% 100%, 50% 50%, 100% 50%, 100% 0% );
+  66% {
+    clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 50%, 100% 50%, 100% 0%);
   }
   100% {
-    clip-path: polygon( 0% 0%, 0% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0% );
+    clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0%);
   }
 }
 @keyframes box-leave {
   0% {
-    clip-path: polygon( 0% 0%, 0% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0% );
+    clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0%);
   }
-  50%{
-    clip-path: polygon( 0% 0%, 0% 100%, 50% 100%, 50% 0%, 100% 0%, 100% 0% );
+  50% {
+    clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0%, 100% 0%, 100% 0%);
   }
   100% {
-    clip-path: polygon( 0% 0%, 0% 0%, 50% 00%, 50% 0%, 100% 0%, 100% 0% );
+    clip-path: polygon(0% 0%, 0% 0%, 50% 00%, 50% 0%, 100% 0%, 100% 0%);
   }
 }
 
-
-.circle{
+.circle {
   --circle-max: 150%;
   --offset-x: 50%;
   --offset-y: 50%;
@@ -1097,39 +1395,42 @@ div.cover-container{
   --circle-max: 100%;
 }
 .circle.enter {
-  div.cover{
-    animation: var( --animation-duration ) circle-enter;  
+  div.cover {
+    animation: var(--animation-duration) circle-enter;
   }
 }
 .circle.leave {
-  div.cover{
-    animation: var( --animation-duration ) circle-leave;
+  div.cover {
+    animation: var(--animation-duration) circle-leave;
   }
 }
 @keyframes circle-enter {
   0% {
-    clip-path: circle( 0% at var( --offset-x ) var( --offset-y ) );
+    clip-path: circle(0% at var(--offset-x) var(--offset-y));
   }
   100% {
-    clip-path: circle( var( --circle-max ) at var( --offset-x ) var( --offset-y ) );
+    clip-path: circle(var(--circle-max) at var(--offset-x) var(--offset-y));
   }
 }
 @keyframes circle-leave {
   0% {
-    clip-path: circle( var( --circle-max ) at var( --offset-x ) var( --offset-y ) );
+    clip-path: circle(var(--circle-max) at var(--offset-x) var(--offset-y));
   }
   100% {
-    clip-path: circle( 0% at var( --offset-x ) var( --offset-y ) );
+    clip-path: circle(0% at var(--offset-x) var(--offset-y));
   }
 }
 
 /*======================== Animation GSAP =======================*/
 
 /* All GSAP will not use clip-path */
-.circle-gsap div.cover, .vertical-gsap div.cover, .horizontal-gsap div.cover, .diagonal-left-gsap div.cover, .diagonal-right-gsap div.cover {
+.circle-gsap div.cover,
+.vertical-gsap div.cover,
+.horizontal-gsap div.cover,
+.diagonal-left-gsap div.cover,
+.diagonal-right-gsap div.cover {
   clip-path: none;
 }
-
 
 .circle-gsap > div.cover-container:nth-child(1) > div.cover {
   mask-image: url(#mask-circle-svg1);
@@ -1147,7 +1448,6 @@ div.cover-container{
   mask-image: url(#mask-circle-svg5);
 }
 
-
 .vertical-gsap > div.cover-container:nth-child(1) > div.cover {
   mask-image: url(#mask-vertical-svg1);
 }
@@ -1163,7 +1463,6 @@ div.cover-container{
 .vertical-gsap > div.cover-container:nth-child(5) > div.cover {
   mask-image: url(#mask-vertical-svg5);
 }
-
 
 .horizontal-gsap > div.cover-container:nth-child(1) > div.cover {
   mask-image: url(#mask-horizontal-svg1);
@@ -1181,7 +1480,6 @@ div.cover-container{
   mask-image: url(#mask-horizontal-svg5);
 }
 
-
 .diagonal-left-gsap > div.cover-container:nth-child(1) > div.cover {
   mask-image: url(#mask-diagonal-left-svg1);
 }
@@ -1197,7 +1495,6 @@ div.cover-container{
 .diagonal-left-gsap > div.cover-container:nth-child(5) > div.cover {
   mask-image: url(#mask-diagonal-left-svg5);
 }
-
 
 .diagonal-right-gsap > div.cover-container:nth-child(1) > div.cover {
   mask-image: url(#mask-diagonal-right-svg1);
@@ -1215,73 +1512,56 @@ div.cover-container{
   mask-image: url(#mask-diagonal-right-svg5);
 }
 
-
-
 .chevron.enter {
-  div.cover{
-    animation: var( --animation-duration ) chevron-enter;  
+  div.cover {
+    animation: var(--animation-duration) chevron-enter;
   }
 }
 .chevron.leave {
-  div.cover{
-    animation: var( --animation-duration ) chevron-leave;
+  div.cover {
+    animation: var(--animation-duration) chevron-leave;
   }
 }
 @keyframes chevron-enter {
   0% {
-    clip-path: polygon(
-      -25% 0%,
-      0% 50%,
-      -25% 100%,
-      0% 100%,
-      0% 50%,
-      0% 0%
-    );
+    clip-path: polygon(-25% 0%, 0% 50%, -25% 100%, 0% 100%, 0% 50%, 0% 0%);
   }
   100% {
-    clip-path: polygon(
-      100% 0%, 
-      125% 50%, 
-      100% 100%, 
-      0% 100%, 
-      0% 50%, 
-      0% 0%
-    );
+    clip-path: polygon(100% 0%, 125% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
   }
 }
 
 @keyframes chevron-leave {
   0% {
     clip-path: polygon(
-      -25% 100%, 
-      0% 50%, 
+      -25% 100%,
+      0% 50%,
       -25% 0%,
-      100% 0%, 
-      100% 50%, 
+      100% 0%,
+      100% 50%,
       100% 100%
     );
   }
   100% {
     clip-path: polygon(
-      100% 100%, 
-      125% 50%, 
+      100% 100%,
+      125% 50%,
       100% 0%,
-      100% 0%, 
-      100% 50%, 
+      100% 0%,
+      100% 50%,
       100% 100%
     );
   }
 }
 
-
 .chevron-left.enter {
-  div.cover{
-    animation: var( --animation-duration ) chevron-left-enter;  
+  div.cover {
+    animation: var(--animation-duration) chevron-left-enter;
   }
 }
 .chevron-left.leave {
-  div.cover{
-    animation: var( --animation-duration ) chevron-left-leave;
+  div.cover {
+    animation: var(--animation-duration) chevron-left-leave;
   }
 }
 @keyframes chevron-left-enter {
@@ -1296,48 +1576,26 @@ div.cover-container{
     );
   }
   100% {
-    clip-path: polygon(
-      0% 0%, 
-      -25% 50%, 
-      0% 100%, 
-      100% 100%, 
-      100% 50%, 
-      100% 0%
-    );
+    clip-path: polygon(0% 0%, -25% 50%, 0% 100%, 100% 100%, 100% 50%, 100% 0%);
   }
 }
 @keyframes chevron-left-leave {
   0% {
-    clip-path: polygon(
-      0% 100%,
-      0% 50%,
-      0% 0%,
-      125% 0%,
-      100% 50%,
-      125% 100%
-    );
+    clip-path: polygon(0% 100%, 0% 50%, 0% 0%, 125% 0%, 100% 50%, 125% 100%);
   }
   100% {
-    clip-path: polygon(
-      0% 100%,
-      0% 50%,
-      0% 0%,
-      0% 0%, 
-      -25% 50%, 
-      0% 100%,
-    );
+    clip-path: polygon(0% 100%, 0% 50%, 0% 0%, 0% 0%, -25% 50%, 0% 100%);
   }
 }
 
-
 .chevron2.enter {
-  div.cover{
-    animation: var( --animation-duration ) chevron2-enter;  
+  div.cover {
+    animation: var(--animation-duration) chevron2-enter;
   }
 }
 .chevron2.leave {
-  div.cover{
-    animation: var( --animation-duration ) chevron2-leave;
+  div.cover {
+    animation: var(--animation-duration) chevron2-leave;
   }
 }
 @keyframes chevron2-enter {
@@ -1352,46 +1610,18 @@ div.cover-container{
     );
   }
   50% {
-    clip-path: polygon(
-      75% 0%, 
-      95% 50%, 
-      75% 100%, 
-      0% 100%, 
-      25% 50%, 
-      0% 0%
-    );
+    clip-path: polygon(75% 0%, 95% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
   }
   100% {
-    clip-path: polygon(
-      100% 0%, 
-      100% 50%, 
-      100% 100%, 
-      0% 100%, 
-      0% 50%, 
-      0% 0%
-    );
+    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
   }
 }
 @keyframes chevron2-leave {
   0% {
-    clip-path: polygon(
-      100% 0%, 
-      100% 50%, 
-      100% 100%, 
-      0% 100%, 
-      0% 50%, 
-      0% 0%
-    );
+    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
   }
   50% {
-    clip-path: polygon(
-      75% 0%, 
-      95% 50%, 
-      75% 100%, 
-      0% 100%, 
-      25% 50%, 
-      0% 0%
-    );
+    clip-path: polygon(75% 0%, 95% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
   }
   100% {
     clip-path: polygon(
@@ -1405,15 +1635,14 @@ div.cover-container{
   }
 }
 
-
 .chevron2-left.enter {
-  div.cover{
-    animation: var( --animation-duration ) chevron2-left-enter;  
+  div.cover {
+    animation: var(--animation-duration) chevron2-left-enter;
   }
 }
 .chevron2-left.leave {
-  div.cover{
-    animation: var( --animation-duration ) chevron2-left-leave;
+  div.cover {
+    animation: var(--animation-duration) chevron2-left-leave;
   }
 }
 @keyframes chevron2-left-enter {
@@ -1428,61 +1657,23 @@ div.cover-container{
     );
   }
   50% {
-    clip-path: polygon(
-      100% 0%, 
-      75% 50%, 
-      100% 100%, 
-      25% 100%, 
-      5% 50%, 
-      25% 0%
-    );
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 5% 50%, 25% 0%);
   }
   100% {
-    clip-path: polygon(
-      100% 0%, 
-      100% 50%, 
-      100% 100%, 
-      0% 100%, 
-      0% 50%, 
-      0% 0%
-
-      
-    );
+    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
   }
 }
 @keyframes chevron2-left-leave {
   0% {
-    clip-path: polygon(
-      100% 0%, 
-      100% 50%, 
-      100% 100%, 
-      0% 100%, 
-      0% 50%, 
-      0% 0%
-    );
+    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%);
   }
   50% {
-    clip-path: polygon(
-      100% 0%, 
-      75% 50%, 
-      100% 100%, 
-      25% 100%, 
-      5% 50%, 
-      25% 0%
-    );
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 5% 50%, 25% 0%);
   }
   100% {
-    clip-path: polygon(
-      0% 0%,
-      -25% 50%,
-      0% 100%,
-      -75% 100%,
-      -90% 50%,
-      -75% 0%
-    );
+    clip-path: polygon(0% 0%, -25% 50%, 0% 100%, -75% 100%, -90% 50%, -75% 0%);
   }
 }
-
 
 /*======================== Control CSS ========================*/
 #control {
