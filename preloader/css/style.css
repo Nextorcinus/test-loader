@@ -12,8 +12,8 @@
 /* Marquee Design */
 .marquee1 {
   top: 50%;
-  transform: translate( 0%, -55% );
-  background:var(--c1);
+  transform: translate( 0%, -60% );
+  background:var(--c3);
   padding: 1% 0 1% 0;
   backdrop-filter: blur(20px);
   
@@ -21,7 +21,7 @@
 .marquee2 {
   top: 50%;
   transform: translate( 0%, 39% );
-  background:var(--c2);
+  background:var(--c4);
   padding: 1% 0 1% 0;
   backdrop-filter: blur(6px);
 }
@@ -841,11 +841,11 @@ width: 11.2px;
   --text-bg-c: #666;
   --preloader-c1: #dbdcef;
   --preloader-c2: #474bff;
-  --preloader-c3: #ef8d9c;
-  --c1: #72d3ff;
-  --c2: #ec73b4;
-  --c3: transparent;
-  --c4: transparent;
+  --preloader-c3: #ffc320;
+  --c1: #3fbcf7;
+  --c2: #f86db7;
+  --c3: rgba(156, 88, 212, 0.699);
+  --c4: rgba(73, 49, 160, 0.767);
 }
 
 
@@ -870,11 +870,11 @@ div.design1 {
   --text-bg-c: #f70;
   --preloader-c1: #dbdcef;
   --preloader-c2: #474bff;
-  --preloader-c3: #ef8d9c;
-  --c1: #e8a24b;
-  --c2: #7ff;
-  --c3: #633d0f;
-  --c4: rgb(54, 177, 116);
+  --preloader-c3: #d4ff5e;
+  --c1: #f1a649;
+  --c2: rgb(205, 255, 217);
+  --c3: #886233d7;
+  --c4: rgba(113, 177, 54, 0.815);
 }
 
 
@@ -896,13 +896,14 @@ div.design2 {
 div.color3 {
   --text-c: #000;
   --text-bg-c: #fff;
-  --preloader-c1: #ef8d9c;
+  --preloader-c1: #b99ea2;
   --preloader-c2: #f7c9d0;
-  --preloader-c3: #ef8d9c;
+  --preloader-c3: #d8d6ff;
   --c1: #ebc6e3;
-  --c2: #ef8d9c;
-  --c3: #e77384;
-  --c4: #753746;
+  --c2: #d39daf;
+  --c3: #d17fa1ea;
+  --c4: #8a4baf;
+  --c5: #ad5b77;
 }
 .design3 {
   --s: 150px; /* control the size*/
@@ -912,7 +913,7 @@ div.color3 {
     conic-gradient(from  45deg at 75% 75%, var(--c3) 90deg,var(--c1) 0 180deg,#0000 0),
     conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg,#0000 0),
     conic-gradient(from -45deg at 50% 100%,#0000 180deg,var(--c3) 0),
-    conic-gradient(from -45deg,var(--c1) 90deg, var(--c2) 0 225deg,var(--c4) 0);
+    conic-gradient(from -45deg,var(--c1) 90deg, var(--c2) 0 225deg,var(--c5) 0);
   background-size: var(--s) var(--s); 
 }
 
@@ -924,8 +925,8 @@ div.color3 {
   --preloader-c3: #6156c4;
   --c1: #6ccde3;
   --c2: #9cebdf;
-  --c3: #70b1a7;
-  --c4: transparent;
+  --c3: #9d94ee;
+  --c4: yellow;
 }
 div.design4 {
   --s: 194px; /* control the size*/
