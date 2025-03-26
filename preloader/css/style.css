@@ -1178,17 +1178,24 @@ div.color3 {
 }
 
 div.design4 {
+  --s: 110px; /* control the size*/
 
-    --s: 110px; /* control the size*/
-
-    background:
-      conic-gradient(from  45deg at 75% 75%,var(--c1) 25%,var(--c2) 0 50%,#0000 0)
-       0 0/var(--s) var(--s),
-      conic-gradient(from 225deg at 25% 25%,var(--c2) 25%,var(--c1) 0 50%,#0000 0)
-       0 0/var(--s) var(--s),
-      repeating-conic-gradient(var(--c2) 0 25%,var(--c1) 0 50%)
-       0 0/calc(2*var(--s)) calc(2*var(--s));
-  
+  background: conic-gradient(
+        from 45deg at 75% 75%,
+        var(--c1) 25%,
+        var(--c2) 0 50%,
+        #0000 0
+      )
+      0 0 / var(--s) var(--s),
+    conic-gradient(
+        from 225deg at 25% 25%,
+        var(--c2) 25%,
+        var(--c1) 0 50%,
+        #0000 0
+      )
+      0 0 / var(--s) var(--s),
+    repeating-conic-gradient(var(--c2) 0 25%, var(--c1) 0 50%) 0 0 /
+      calc(2 * var(--s)) calc(2 * var(--s));
 }
 
 .color5 {
@@ -1198,13 +1205,25 @@ div.design4 {
   --preloader-c1: #d3f02f;
   --preloader-c2: #1ddafc;
   --preloader-c3: #ff7b00;
-  --c1: #50816a;
-  --c2: #1c25a5;
+  --c1: #2800bb;
+  --c2: #000dc2;
   --c3: #0fac70;
   --c4: transparent;
 }
 div.design5 {
-  background-image: radial-gradient(circle at center center, var(--c2), var(--c1)), repeating-radial-gradient(circle at center center, var(--c2), var(--c1), 75px, transparent 150px, transparent 75px);
+  background-image: radial-gradient(
+      circle at center center,
+      var(--c2),
+      var(--c1)
+    ),
+    repeating-radial-gradient(
+      circle at center center,
+      var(--c2),
+      var(--c1),
+      75px,
+      transparent 150px,
+      transparent 75px
+    );
   background-blend-mode: multiply;
   background-color: #385587;
 }
