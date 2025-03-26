@@ -1172,7 +1172,7 @@ div.color3 {
   --preloader-c2: #cc559e;
   --preloader-c3: #ff7b00;
   --c1: #7e3a78;
-  --c2: #d14334;
+  --c2: #395ac5;
   --c3: transparent;
   --c4: transparent;
 }
@@ -1193,32 +1193,20 @@ div.design4 {
 
 .color5 {
   --text-c: #fff;
-  --text-bg-c: #704dc0a8;
-  --text-bg-d: #ee488d8e;
-  --preloader-c1: #6cff7f;
-  --preloader-c2: #fffb00;
+  --text-bg-c: #ff0b7da4;
+  --text-bg-d: #212ab68e;
+  --preloader-c1: #d3f02f;
+  --preloader-c2: #1ddafc;
   --preloader-c3: #ff7b00;
-  --c1: #ff9f31;
-  --c2: #fffb00;
+  --c1: #0c2a6b;
+  --c2: #32518a;
   --c3: #0fac70;
   --c4: transparent;
 }
 div.design5 {
-  background: linear-gradient(45deg, #000850 0%, #000320 100%),
-    radial-gradient(100% 225% at 100% 0%, #496a7c 0%, #000000 100%),
-    linear-gradient(225deg, #00ffcd 0%, #000000 100%),
-    linear-gradient(
-      135deg,
-      #cdffeb 10%,
-      #cdffeb 35%,
-      #009f9d 35%,
-      #009f9d 60%,
-      #07456f 60%,
-      #07456f 67%,
-      #0f0a3c 67%,
-      #0f0a3c 100%
-    );
-  background-blend-mode: screen, overlay, hard-light, normal;
+  background-image: radial-gradient(circle at center center, var(--c2), var(--c1)), repeating-radial-gradient(circle at center center, var(--c2), var(--c1), 75px, transparent 150px, transparent 75px);
+  background-blend-mode: multiply;
+  background-color: #385587;
 }
 
 /* ================================ Semua Yg Dibawah Ini Adalah Preloader Animation =============================*/
