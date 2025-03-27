@@ -289,7 +289,7 @@
   border-radius: 11.2px;
   box-shadow: 28px 0px 0 0 var(--preloader-c1),
     22.7px 16.5px 0 0 var(--preloader-c1), 8.68px 26.6px 0 0 var(--preloader-c1),
-    -8.68px 26.6px 0 0 var(--preloader-c1), -22.7px 16.5px 0 0 #474bff;
+    -8.68px 26.6px 0 0 var(--preloader-c1), -22.7px 16.5px 0 0 var(--c2);
   animation: spinner-b87k6z 1s infinite linear;
 }
 
@@ -1227,6 +1227,174 @@ div.design5 {
   background-blend-mode: multiply;
   background-color: #385587;
 }
+
+.color6 {
+  --text-c: #fff;
+  --text-bg-c: #ff6600;
+  --text-bg-d: #00ff4cce;
+  --preloader-c1: #5a002d;
+  --preloader-c2: #fc3e1d;
+  --preloader-c3: #ff7b00;
+  --c1: #8f4bfc;
+  --c2: #10343f;
+  --c3: #0fac70;
+  --c4: transparent;
+}
+div.design6 {
+  background:
+  radial-gradient(50% 50% at 100% 0,var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+   var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+   #0000 96%),
+  radial-gradient(50% 50% at 0 100%,var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+   var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+   #0000 96%),
+  radial-gradient(50% 50%,var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+   var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+   #0000 96%),
+  radial-gradient(50% 50%,var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+   var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+   #0000 96%) 81px 81px;
+background-size: 162px 162px;
+background-color: var(--c1);
+}
+
+.color7 {
+  --text-c: #fff;
+  --text-bg-c: #6f00ff;
+  --text-bg-d: #ff4800ce;
+  --preloader-c1: #ffeaf5;
+  --preloader-c2: #fbff00;
+  --preloader-c3: #ff7b00;
+  --c1: #4be1fc;
+  --c2: #091c22;
+  --c3: #2659a5;
+  --c4: transparent;
+}
+div.design7 {
+  background-image:  linear-gradient(30deg, var(--c1) 12%, transparent 12.5%, transparent 87%, var(--c1) 87.5%, var(--c1)), linear-gradient(150deg, var(--c1) 12%, transparent 12.5%, transparent 87%, var(--c1) 87.5%, var(--c1)), linear-gradient(30deg, var(--c1) 12%, transparent 12.5%, transparent 87%, var(--c1) 87.5%, var(--c1)), linear-gradient(150deg, var(--c1) 12%, transparent 12.5%, transparent 87%, var(--c1) 87.5%, var(--c1)), linear-gradient(60deg, var(--c2) 25%, transparent 25.5%, transparent 75%, var(--c2) 75%, var(--c2)), linear-gradient(60deg, var(--c2) 25%, transparent 25.5%, transparent 75%, var(--c2) 75%, var(--c2));
+  background-size: 162px 283.5px;
+  background-position: 0 0, 0 0, 81px 141.75px, 81px 141.75px, 0 0, 81px 141.75px;
+  background-color: var(--c3);
+}
+
+
+.color8 {
+  --text-c: #fff;
+  --text-bg-c: #ff4800;
+  --text-bg-d: #bfc214b0;
+  --preloader-c1: #fff0bf;
+  --preloader-c2: #fbff00;
+  --preloader-c3: #ff7b00;
+  --c1: #e4844a;
+  --c2: #0d6759;
+  --c3: #2659a5;
+  --c4: transparent;
+}
+div.design8 {
+    --s: 16px; /* control the size*/
+    --g:radial-gradient(30% 50% at 30% 100%,#0000 66%,var(--c1) 67% 98%,#0000);
+    background:
+      var(--g),var(--g) calc(5*var(--s)) calc(3*var(--s)),
+      repeating-linear-gradient(90deg,var(--c1) 0 10%,var(--c2) 0 50%);
+    background-size: calc(10*var(--s)) calc(6*var(--s));
+}
+
+
+.color9 {
+  --text-c: #fff;
+  --text-bg-c: #ff31c1;
+  --text-bg-d: #ffee00de;
+  --preloader-c1: #1210a0;
+  --preloader-c2: #00d9ff;
+  --preloader-c3: #ff7b00;
+  --c1: #1f2246;
+  --c2: #40e37e;
+  --c3: #2659a5;
+  --c4: transparent;
+}
+div.design9 {
+    --s: 261px; /* control the size*/   
+    --g:,var(--c1) 25%,#0000 0;
+    background:
+      conic-gradient(from  45deg at 75% 75%var(--g)),
+      conic-gradient(from 135deg at 25% 75%var(--g)),
+      conic-gradient(from -45deg at 75% 25%var(--g)),
+      conic-gradient(from 225deg at 25% 25%var(--g)),
+      repeating-conic-gradient(from -45deg,var(--c1) 0 45deg,var(--c2) 0 50%);
+    background-size: var(--s) var(--s);
+}
+
+/* black and white */
+.color10 {
+  --text-c: #fff;
+  --text-bg-c: #131313;
+  --text-bg-d: #9b9b9bde;
+  --preloader-c1: #ffffff;
+  --preloader-c2: #bdbdbd;
+  --preloader-c3: #ff7b00;
+  --c1: #0f0f0f;
+  --c2: #999999;
+  --c3: #2659a5;
+  --c4: transparent;
+}
+div.design10 {
+    --s: 80px; /* control the size*/    
+    --_g: 
+      #0000 calc(-650%/13) calc(50%/13),var(--c1) 0 calc(100%/13),
+      #0000 0 calc(150%/13),var(--c1) 0 calc(200%/13),
+      #0000 0 calc(250%/13),var(--c1) 0 calc(300%/13);
+    --_g0: repeating-linear-gradient( 45deg,var(--_g));
+    --_g1: repeating-linear-gradient(-45deg,var(--_g));
+    background:
+      var(--_g0),var(--_g0) var(--s) var(--s),
+      var(--_g1),var(--_g1) var(--s) var(--s) var(--c2);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+.color11 {
+  --text-c: #fff;
+  --text-bg-c: #1b00b183;
+  --text-bg-d: #dd009391;
+  --preloader-c1: #bbff00;
+  --preloader-c2: #bdbdbd;
+  --preloader-c3: #ff7b00;
+  --c1: #be8d32;
+  --c2: #920d0d;
+  --c3: #2659a5;
+  --c4: transparent;
+}
+div.design11 {
+    --s: 158px; /* control the size*/
+  
+    background:
+      conic-gradient(from -45deg,var(--c1) 90deg,#0000 0 180deg,var(--c2) 0 270deg,#0000 0)   
+        0 calc(var(--s)/2)/var(--s) var(--s),    
+      conic-gradient(from 135deg at 50% 0,var(--c1) 90deg,var(--c2) 0)  
+        0 0/calc(2*var(--s)) var(--s);
+}
+
+/* black and white */
+.color12 {
+  --text-c: #fff;
+  --text-bg-c: #35353583;
+  --text-bg-d: #bbbbbb91;
+  --preloader-c1: #ececec;
+  --preloader-c2: #bdbdbd;
+  --preloader-c3: #ff7b00;
+  --c1: #1d1d1d;
+  --c2: #bbbbbbf6;
+  --c3: #505050;
+  --c4: transparent;
+}
+div.design12 {
+  background-image:  linear-gradient(30deg, var(--c1) 12%, transparent 12.5%, transparent 87%, var(--c1) 87.5%, var(--c1)), linear-gradient(150deg, var(--c1) 12%, transparent 12.5%, transparent 87%, var(--c1) 87.5%, var(--c1)), linear-gradient(30deg, var(--c1) 12%, transparent 12.5%, transparent 87%, var(--c1) 87.5%, var(--c1)), linear-gradient(150deg, var(--c1) 12%, transparent 12.5%, transparent 87%, var(--c1) 87.5%, var(--c1)), linear-gradient(60deg, var(--c2) 25%, transparent 25.5%, transparent 75%, var(--c2) 75%, var(--c2)), linear-gradient(60deg, var(--c2) 25%, transparent 25.5%, transparent 75%, var(--c2) 75%, var(--c2));
+  background-size: 162px 283.5px;
+  background-position: 0 0, 0 0, 81px 141.75px, 81px 141.75px, 0 0, 81px 141.75px;
+  background-color: var(--c3);
+
+}
+
+
 
 /* ================================ Semua Yg Dibawah Ini Adalah Preloader Animation =============================*/
 
