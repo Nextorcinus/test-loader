@@ -1394,6 +1394,108 @@ div.design12 {
 
 }
 
+.color13 {
+  --text-c: #fff;
+  --text-bg-c: #ff2600be;
+  --text-bg-d: #0072dd91;
+  --preloader-c1: #c1cf00;
+  --preloader-c2: #d301fd;
+  --preloader-c3: #ff7b00;
+  --c1: #20003d;
+  --c2: #3a227e;
+  --c3: #2659a5;
+  --c4: transparent;
+}
+div.design13 { 
+    --s: 147px; /* control the size*/
+    
+    --_g: radial-gradient(var(--c2) 49%,#0000 50%);
+    background:
+     var(--_g) calc(var(--s)/-2) calc(var(--s)/2),
+     repeating-conic-gradient(from 45deg,var(--c1) 0 25%,#0000 0 50%)
+       calc(var(--s)/2) calc(var(--s)/2),
+     var(--_g),var(--_g) var(--s) var(--s) var(--c1);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+  
+}
+
+
+.color14 {
+  --text-c: #fff;
+  --text-bg-c: #dcf500be;
+  --text-bg-d: #dd970091;
+  --preloader-c1: #740055;
+  --preloader-c2: #fdcf01;
+  --preloader-c3: #ff7b00;
+  --c1: #3d0000;
+  --c2: #7e2222;
+  --c3: #a52626;
+  --c4: rgb(212, 68, 68);
+}
+div.design14 { 
+  background:
+  repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c4) 0 180deg) 
+   162px 93.47399999999999px,
+  repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+background-size: 324px 187px;
+
+  
+}
+
+.color15 {
+  --text-c: #fff;
+  --text-bg-c: 	#9db85d;
+  --text-bg-d: #f6dc8f;
+  --preloader-c1: #c23d00;
+  --preloader-c2: #fdcf01;
+  --preloader-c3: #ff7b00;
+  --c1: #87a14b;
+  --c2: #446c51;
+  --c3: #a52626;
+  --c4: rgb(212, 68, 68);
+}
+div.design15 { 
+    --s: 150px; /* control the size*/
+    --_l:#0000 43.75%,var(--c1) 0 56.25%,#0000 0;
+    background:
+      conic-gradient(#0000 75%,var(--c1) 0) 
+       calc(var(--s)/-8) calc(var(--s)/-8)/calc(var(--s)/2) calc(var(--s)/2),
+      repeating-conic-gradient(var(--c2) 0 25%,#0000 0 50%) 
+       calc(var(--s)/-4) calc(var(--s)/-4)/var(--s) var(--s),
+      linear-gradient(-45deg,var(--_l))0 0/var(--s) var(--s),
+      linear-gradient( 45deg,var(--_l))0 0/var(--s) var(--s) var(--c2);
+
+}
+
+
+.color16 {
+  --text-c: #fff;
+  --text-bg-c: 	#9dff00;
+  --text-bg-d: #00bbc2;
+  --preloader-c1: #fd4801;
+  --preloader-c2: #b601fd;
+  --preloader-c3: #ff7b00;
+  --c1: #770ef8;
+  --c2: #c89efc;
+  --c3: #a52626;
+  --c4: rgb(212, 68, 68);
+}
+div.design16 { 
+    --s: 112px; /* control the size*/
+    
+    --g:from 45deg at 50% 35%,#0000 75%,;
+    --_s:var(--s) calc(2*var(--s));
+    background:
+      conic-gradient(var(--g)var(--c2) 0) 
+       calc(var(--s)/2) var(--s)/var(--_s),
+      conic-gradient(var(--g)var(--c1) 0) 
+       calc(var(--s)/2)        0/var(--_s),
+      conic-gradient(#0004 135deg,#0000 0 225deg,#0009 0)
+       0 0/var(--s) var(--s),
+      linear-gradient(var(--c1) 50%,var(--c2) 0) 
+       0 var(--s)/var(--_s);
+  
+}
 
 
 /* ================================ Semua Yg Dibawah Ini Adalah Preloader Animation =============================*/
