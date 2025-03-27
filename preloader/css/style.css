@@ -1498,6 +1498,120 @@ div.design16 {
 }
 
 
+.color17 {
+  --text-c: #fff;
+  --text-bg-c: 	#614923;
+  --text-bg-d: #b29b8c;
+  --preloader-c1: #f0ff6c;
+  --preloader-c2: #fd9001;
+  --preloader-c3: #ff7b00;
+  --c1: #f9f2e7;
+  --c2: #74712c;
+  --c3: #5d632b;
+  --c4: rgb(212, 68, 68);
+}
+div.design17 { 
+    --s: 55px; /* control the size*/
+
+    --b: calc(var(--s)/3.67); /* control the thickness of the curved lines */
+    
+    --_r: calc(1.28*var(--s) + var(--b)/2) at top 50%;
+    --_f: calc(99.5% - var(--b)),var(--c1) calc(101% - var(--b)) 99.5%,#0000 101%;
+    --_g0: calc(-.8*var(--s)), var(--c2) var(--_f);
+    --_g1: calc(-.8*var(--s)), var(--c3) var(--_f);
+    --_s: calc(1.8*var(--s) + var(--b));
+    background: 
+      radial-gradient(var(--_r) right var(--_g0)) calc(-1*var(--_s)) var(--s),
+      radial-gradient(var(--_r) left  var(--_g1))         var(--_s)  calc(-1*var(--s)),
+      radial-gradient(var(--_r) right var(--_g1)) calc(var(--_s)/-2) calc(-1*var(--s)),
+      radial-gradient(var(--_r) left  var(--_g0)) calc(var(--_s)/ 2) var(--s),
+      linear-gradient(90deg,var(--c2) 50%,var(--c3) 0);
+    background-size: var(--_s) calc(4*var(--s));
+  
+}
+
+.color18 {
+  --text-c: #fff;
+  --text-bg-c: 	#7a308f;
+  --text-bg-d: #a11099;
+  --preloader-c1: #ffc03a;
+  --preloader-c2: #dd92f1;
+  --preloader-c3: #ff7b00;
+  --c1: #100314;
+  --c2: #f02475;
+  --c3: #5d632b;
+  --c4: rgb(212, 68, 68);
+}
+div.design18 { 
+    --s: 6px; /* control the size*/   
+    --g:#0000 66%,var(--c1) 68% 98%,#0000;
+    background:
+      radial-gradient(30% 30% at 0%   30%,var(--g))
+       var(--s) calc(9*var(--s)),
+      radial-gradient(30% 30% at 100% 30%,var(--g))
+       var(--s) calc(-1*var(--s)),
+      radial-gradient(30% 30% at 30% 100%,var(--g))
+       calc(10*var(--s)) 0,
+      radial-gradient(30% 30% at 30% 0%  ,var(--g))
+       var(--c2);
+    background-size: calc(20*var(--s)) calc(20*var(--s));
+  
+}
+
+.color19 {
+  --text-c: #fff;
+  --text-bg-c: #e5c773;
+  --text-bg-d: #cea552;
+  --preloader-c1: #53000e;
+  --preloader-c2: #ff1e00;
+  --preloader-c3: #ff7b00;
+  --c1: #c7956d;
+  --c2: #3b2833;
+  --c3: #5d632b;
+  --c4: rgb(212, 68, 68);
+}
+div.design19 { 
+    --s: 20px; /* control the size*/ 
+    --c:#0000 46.46%,var(--c1) 0 53.53%,#0000 0;
+    --d:calc(10*var(--s)) calc(10*var(--s));
+    --g:/var(--d) conic-gradient(at 40% 40%,#0000 75%,var(--c1) 0);
+    background:
+      conic-gradient(at 40% 40%,#0000 75%,var(--c2) 0) 
+       calc(9*var(--s)) calc(9*var(--s))/
+       calc(5*var(--s)) calc(5*var(--s)),
+      calc(8*var(--s)) calc(8*var(--s)) var(--g),
+      calc(3*var(--s)) calc(3*var(--s)) var(--g),
+      linear-gradient( 45deg,var(--c)) 0 0/var(--d),
+      linear-gradient(-45deg,var(--c)) 0 0/var(--d) var(--c2);
+  
+}
+
+
+.color20 {
+  --text-c: #fff;
+  --text-bg-c:	#c66b3d;
+  --text-bg-d: #e3b04b;
+  --preloader-c1: #fff4f2;
+  --preloader-c2: #f3ff83;
+  --preloader-c3: #ff7b00;
+  --c1: #7897ec;
+  --c2: #2b2454;
+  --c3: #5d632b;
+  --c4: rgb(212, 68, 68);
+}
+div.design20 { 
+    --s: 52px; /* control the size*/
+
+    
+    --p:35%,#0000 calc(35% + 1px);
+    background:
+      radial-gradient(at 0 100%,var(--c1) var(--p)) var(--s) 0,
+      radial-gradient(at 0 100%,var(--c2) var(--p)) 0 var(--s),
+      repeating-conic-gradient(from 45deg,var(--c2) 0 25%,var(--c1) 0 50%);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+  
+  }
+
 /* ================================ Semua Yg Dibawah Ini Adalah Preloader Animation =============================*/
 
 #preloader-svg {
