@@ -576,7 +576,7 @@
 }
 
 .spinner22 {
-  width: 60px;
+  width: 55px;
   aspect-ratio: 1;
   background: var(--preloader-c1);
   clip-path: polygon(
