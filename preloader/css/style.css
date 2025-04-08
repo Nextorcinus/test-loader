@@ -16,7 +16,7 @@
 }
 .marquee2 {
   top: 50%;
-  transform: translate(0%, 39%);
+  transform: translate(0%, 42%);
   background: var(--text-bg-d);
   padding: 1% 0 1% 0;
 
@@ -1039,34 +1039,27 @@ div.design2 {
 
 div.color3 {
   --text-c: #fff;
-  --text-bg-c: #704dc0;
-  --text-bg-d: #d81862d3;
-  --preloader-c1: #6cff7f;
-  --preloader-c2: #fffb00;
-  --preloader-c3: #ff7b00;
-  --c1: #ff9f31;
-  --c2: #fffb00;
-  --c3: #0fac70;
-  --c4: transparent;
+  --text-bg-c: #e100fff5;
+  --text-bg-d: #ffe600;
+  --preloader-c1: #0b0047;
+  --preloader-c2: #ff9101;
+  --preloader-c3: #ff006a;
+  --c1: #31ffee;
+  --c2: #2c7ab9;
+  --c3: #0f65ac;
+  --c4: #6885c4;
 }
 .design3 {
-  --s: 150px; /* control the size*/
+  background:
+  conic-gradient(from 0deg at calc(500%/6) calc(100%/3),var(--c1) 0 120deg,#0000 0),
+  conic-gradient(from -120deg at calc(100%/6) calc(100%/3),var(--c2) 0 120deg,#0000 0),
+  conic-gradient(from 120deg at calc(100%/3) calc(500%/6),var(--c3) 0 120deg,#0000 0),
+  conic-gradient(from 120deg at calc(200%/3) calc(500%/6),var(--c3) 0 120deg,#0000 0),
+  conic-gradient(from -180deg at calc(100%/3) 50%,var(--c2)  60deg,var(--c3) 0 120deg,#0000 0),
+  conic-gradient(from 60deg at calc(200%/3) 50%,var(--c3)  60deg,var(--c1) 0 120deg,#0000 0),
+  conic-gradient(from -60deg at 50% calc(100%/3),var(--c3) 120deg,var(--c2) 0 240deg,var(--c1) 0);
+background-size: 322px 186px;
 
-  background: conic-gradient(
-      from 45deg at 75% 75%,
-      var(--c3) 90deg,
-      var(--c1) 0 180deg,
-      #0000 0
-    ),
-    conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg, #0000 0),
-    conic-gradient(from -45deg at 50% 100%, #0000 180deg, var(--c3) 0),
-    conic-gradient(
-      from -45deg,
-      var(--c1) 90deg,
-      var(--c2) 0 225deg,
-      var(--c5) 0
-    );
-  background-size: var(--s) var(--s);
 }
 
 .color4 {
