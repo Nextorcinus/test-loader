@@ -1312,16 +1312,16 @@ background-size: 324px 187px;
 }
 
 .color15 {
-  --text-c: #fff;
+  --text-c: #50081e;
   --text-bg-c: 	#9db85d;
   --text-bg-d: #f6dc8f;
-  --preloader-c1: #c23d00;
+  --preloader-c1: #df1c1c;
   --preloader-c2: #fdcf01;
   --preloader-c3: #ff7b00;
   --c1: #87a14b;
   --c2: #446c51;
-  --c3: #a52626;
-  --c4: rgb(212, 68, 68);
+  --c3: #c3dd2d;
+  --c4: #d0d8a2;
 }
 div.design15 { 
     --s: 150px; /* control the size*/
@@ -1338,15 +1338,15 @@ div.design15 {
 
 
 .color16 {
-  --text-c: #fff;
-  --text-bg-c: 	#9dff00;
-  --text-bg-d: #00bbc2;
-  --preloader-c1: #fd4801;
+  --text-c: #ffffff;
+  --text-bg-c: 	#d600526e;
+  --text-bg-d: #5f0f548f;
+  --preloader-c1: #9cfd01;
   --preloader-c2: #b601fd;
-  --preloader-c3: #ff7b00;
+  --preloader-c3: #00e1ff;
   --c1: #770ef8;
   --c2: #c89efc;
-  --c3: #a52626;
+  --c3: #66b3f3;
   --c4: rgb(212, 68, 68);
 }
 div.design16 { 
@@ -1368,16 +1368,16 @@ div.design16 {
 
 
 .color17 {
-  --text-c: #fff;
+  --text-c: #ffd000;
   --text-bg-c: 	#614923;
   --text-bg-d: #b29b8c;
-  --preloader-c1: #f0ff6c;
+  --preloader-c1: #ff6c6c;
   --preloader-c2: #fd9001;
-  --preloader-c3: #ff7b00;
+  --preloader-c3: #2d8f96;
   --c1: #f9f2e7;
   --c2: #74712c;
-  --c3: #5d632b;
-  --c4: rgb(212, 68, 68);
+  --c3: #798132;
+  --c4: rgb(145, 209, 137);
 }
 div.design17 { 
     --s: 55px; /* control the size*/
@@ -1401,15 +1401,15 @@ div.design17 {
 
 .color18 {
   --text-c: #fff;
-  --text-bg-c: 	#7a308f;
-  --text-bg-d: #a11099;
-  --preloader-c1: #ffc03a;
+  --text-bg-c: 	#7a308fab;
+  --text-bg-d: #a1109a83;
+  --preloader-c1: #3ab0ff;
   --preloader-c2: #dd92f1;
-  --preloader-c3: #ff7b00;
-  --c1: #100314;
-  --c2: #f02475;
-  --c3: #5d632b;
-  --c4: rgb(212, 68, 68);
+  --preloader-c3: #d9ff00;
+  --c1: #f5d4ff;
+  --c2: #c44e9c;
+  --c3: #9d67bd;
+  --c4: rgb(145, 64, 141);
 }
 div.design18 { 
     --s: 6px; /* control the size*/   
@@ -1428,12 +1428,12 @@ div.design18 {
 }
 
 .color19 {
-  --text-c: #fff;
-  --text-bg-c: #e5c773;
-  --text-bg-d: #cea552;
-  --preloader-c1: #53000e;
+  --text-c: #ffa600;
+  --text-bg-c: #771762de;
+  --text-bg-d: #ce5a529c;
+  --preloader-c1: #d8d50a;
   --preloader-c2: #ff1e00;
-  --preloader-c3: #ff7b00;
+  --preloader-c3: #ff6600;
   --c1: #c7956d;
   --c2: #3b2833;
   --c3: #633f2b;
@@ -1457,22 +1457,34 @@ div.design19 {
 
 
 .color20 {
-  --text-c: #fff;
-  --text-bg-c:	#ff000098;
-  --text-bg-d: #000000b4;
+  --text-c: #043f81;
+  --text-bg-c:	#0ec2da98;
+  --text-bg-d: #09e29ab4;
   --preloader-c1: #fbff00;
   --preloader-c2: #f3ff83;
-  --preloader-c3: #ff7b00;
-  --c1: #fffb00;
-  --c2: #181818;
-  --c3: #5d632b;
-  --c4: rgb(212, 68, 68);
+  --preloader-c3: #fd8feb;
+  --c1: #f6edb3;
+  --c2: #acc4a3;
+  --c3: #55897c;
+  --c4: #9ce4d2;
 }
 div.design20 { 
-  background:
-  linear-gradient(135deg,#0000 18.75%,var(--c2) 0 31.25%,#0000 0),
-  repeating-linear-gradient(45deg,var(--c2) -6.25% 6.25%,var(--c1) 0 18.75%);
-background-size: 100px 100px;
+    --s: 264px; /* control the size*/
+    --c1: #f6edb3;
+    --c2: #acc4a3;
+    --c3: #55897c;
+    
+    --_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;
+    --_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);
+    background:
+      var(--_g),var(--_g) 0 calc(var(--s)/2),
+      conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
+      conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
+      linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
+      conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
+      linear-gradient(-150deg,var(--_l)) var(--c3);
+    background-size: calc(0.866*var(--s)) var(--s);
+
   
   }
 
