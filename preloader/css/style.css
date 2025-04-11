@@ -35,7 +35,7 @@
 
 /* marquee backdrop blur */
 .marquee_performa {
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(15px);
 }
 
 .marquee {
